@@ -953,7 +953,8 @@ flatpak install --user westering-x86_64.flatpak</pre><button type="button" data-
         <div><b>Westering</b><a href="https://github.com/peterwalker78/westering">github.com/peterwalker78/westering</a></div>
       </div>
       <p class="small">Also by Peter: <a href="https://pedrohead.itch.io/phase-break">Phase Break</a>, a 2.5D arcade shooter for Windows, macOS, Linux and Android (code and some art by AI; music, story and level design by Peter), and the album its music comes from, <a href="https://soundcloud.com/peterwalker78/sets/the-buzz">The Buzz</a>, released as REKLAW.</p>
-      <p class="small">All code written by AI (Claude, by Anthropic), directed by Peter Walker. Every picture of the apps comes from the apps themselves; the dotted illustrations are drawn for this page in the apps' own style. This page sets no cookies and loads nothing from anywhere else. A plain-text summary is at <a href="llms.txt">llms.txt</a>.</p>
+      <p class="small" id="visitors" hidden></p>
+      <p class="small">All code written by AI (Claude, by Anthropic), directed by Peter Walker. Every picture of the apps comes from the apps themselves; the dotted illustrations are drawn for this page in the apps' own style. This page sets no cookies. It asks one service, abacus.jasoncameron.dev, to count visitors and how far down the page each one reads; nothing sent says who you are. A plain-text summary is at <a href="llms.txt">llms.txt</a>.</p>
     </div>
   </div>
 </footer>
@@ -968,6 +969,36 @@ document.querySelectorAll("[data-copy]").forEach(function (b) {
     try { navigator.clipboard.writeText(text).then(function () { done(true); }, select); } catch (e) { select(); }
   });
 });
+
+(function () {
+  var api = "https://abacus.jasoncameron.dev/", ns = "human-again-pw78/";
+  function get(key) { try { return localStorage.getItem("ha-" + key); } catch (e) { return null; } }
+  function put(key, v) { try { localStorage.setItem("ha-" + key, v); } catch (e) {} }
+  function call(verb, key) {
+    return fetch(api + verb + "/" + ns + key, { keepalive: true }).then(function (r) { return r.json(); });
+  }
+
+  // One visitor per browser: the first visit adds one, later visits just read the total.
+  var seen = get("counted");
+  call(seen ? "get" : "hit", "visitors").then(function (d) {
+    if (typeof d.value !== "number") return;
+    put("counted", "1");
+    var el = document.getElementById("visitors");
+    el.textContent = d.value === 1 ? "You are the first visitor." : "You are one of " + d.value.toLocaleString("en-GB") + " visitors.";
+    el.hidden = false;
+  }).catch(function () {});
+
+  // How far down each visitor reads, in tenths, each tenth counted once per browser.
+  var read = +get("read") || 0, queued = false;
+  function measure() {
+    queued = false;
+    var h = document.documentElement.scrollHeight;
+    var tenth = Math.min(10, Math.floor((scrollY + innerHeight) / h * 10 + 0.001));
+    while (read < tenth) { read++; put("read", read); call("hit", "read-" + read * 10).catch(function () {}); }
+  }
+  addEventListener("scroll", function () { if (!queued) { queued = true; requestAnimationFrame(measure); } }, { passive: true });
+  addEventListener("load", measure);
+})();
 </script>
 </body>
 </html>
