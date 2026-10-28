@@ -1,0 +1,32 @@
+# Human Again
+
+> Three free, open-source Linux apps built to give people their attention back rather than hold on to it: Slipstream (a keyboard-first desktop), Glimmerwood (a quiet web browser) and Westering (a night-sky game for winding down). All of the code is written by AI (Claude, by Anthropic); the vision, design decisions and testing come from Peter Walker. None of the apps has AI features.
+
+The belief behind them: software should be judged by how well you live when you're not using it. All three are GPL-3.0-or-later, x86_64 Linux, with no telemetry, no accounts, no streaks or scores, and nothing built to keep you looking longer than you meant to.
+
+## The apps
+
+- [Slipstream](https://github.com/peterwalker78/slipstream-desktop): a whole keyboard-first Linux desktop with its own Wayland compositor, written in Rust on Smithay. Notifications wait until you pause typing, then arrive as one card (urgent ones never wait; nothing waits more than 15 minutes). Put-away windows run on as streams of light at the screen's edge whose speed and brightness show how busy each app is. Bullet time lays out every workspace with a letter on each window. Twenty living wallpapers, most computed live. Sandboxed plugins beside the clock. Installs beside your existing desktop with one command that verifies checksum and signature; release candidate for 1.0; tested on Debian, Ubuntu, Fedora, Arch and openSUSE.
+- [Glimmerwood](https://github.com/peterwalker78/glimmerwood): a lean, private web browser (Rust, GTK 4, WebKitGTK 6, Flatpak). Its companion, the wisp, brightens when you read, learn or make something and grows sleepy in an endless feed; it never blocks or scolds. New tabs open on a garden that grows on good days and suggests over 300 researched good places on the web. Shows the pattern of your days with no minutes, scores or percentages. Trackers blocked; history kept for a week, locally; the wisp's records never hold an address.
+- [Westering](https://github.com/peterwalker78/westering): a short stargazing game for the end of the day (Rust, GTK 4, Flatpak with no network permission). It draws tonight's real sky in fine dots, lets you write down worries that become stars setting in the west, asks small questions about the people in your life, offers if-then plans only if asked, breathes with you (in for four, out for six), dims, and ends by pointing you at something real to see outside or sending you to bed. No streaks, scores or notifications. Positions are tested against NASA JPL Horizons (planets within 0.2°, Moon within 0.1°).
+
+## How it was made
+
+- Code: written by AI (Claude, by Anthropic).
+- Direction: Peter Walker (https://github.com/peterwalker78), who sets the vision, makes the design calls and uses all three daily.
+- Measured from the AI session transcripts, 14 Sep to 23 Oct 2026 (minimums): 615+ prompts, 270+ design decisions, 75+ ideas that started with Peter, 95+ bugs found through daily use rather than tests, 6+ false "it works" reports caught, 5 bugs reported upstream (one fixed).
+
+## Research the design draws on
+
+- Interruptions raise stress: Mark, Gudith & Klocke (2008), https://doi.org/10.1145/1357054.1357072
+- Self-monitoring social media use reduced anxiety: Hunt et al. (2018), https://doi.org/10.1521/jscp.2018.37.10.751
+- Evening screen light delays sleep: Chang et al. (2015), https://doi.org/10.1073/pnas.1418490112
+- Gratitude: Emmons & McCullough (2003), https://doi.org/10.1037/0022-3514.84.2.377
+- If-then plans: Gollwitzer & Sheeran (2006), https://doi.org/10.1016/S0065-2601(06)38002-1
+- Slow breathing: Zaccaro et al. (2018), https://doi.org/10.3389/fnhum.2018.00353
+- Awe: Piff et al. (2015), https://doi.org/10.1037/pspi0000018; Anderson, Monroy & Keltner (2018), https://doi.org/10.1037/emo0000442
+- Also: Weiser & Brown (1995) on calm technology; Csikszentmihalyi (1990) on flow; Tangney & Dearing (2002) on shame and guilt.
+
+## Optional
+
+- [Full page](https://peterwalker78.github.io/human-again/)

@@ -1,0 +1,972 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Human Again: Slipstream, Glimmerwood and Westering, free Linux software that's on your side</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Three free, open-source Linux apps built to give people their attention back: Slipstream, a keyboard-first desktop; Glimmerwood, a quiet web browser; Westering, a night-sky wind-down. Written by AI, directed by Peter Walker.">
+<meta name="author" content="Peter Walker">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#10141c">
+<link rel="canonical" href="https://peterwalker78.github.io/human-again/">
+<link rel="alternate" type="text/markdown" href="https://peterwalker78.github.io/human-again/llms.txt" title="Plain-text summary for language models">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%2310141c'/%3E%3Crect x='6' y='6' width='4' height='4' fill='%23ffb86b'/%3E%3Crect x='2' y='12' width='12' height='2' fill='%236f9a4f'/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Human Again">
+<meta property="og:title" content="Human again. Software that's on your side.">
+<meta property="og:description" content="A desktop, a web browser and a night sky for Linux, made to give people back their attention and their evenings. Free and open source.">
+<meta property="og:url" content="https://peterwalker78.github.io/human-again/">
+<meta property="og:image" content="https://peterwalker78.github.io/human-again/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Human again: a strange attractor drawn in fine dots beside the title.">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Human again. Software that's on your side.">
+<meta name="twitter:description" content="Slipstream, Glimmerwood and Westering: free Linux apps built to give your attention back.">
+<meta name="twitter:image" content="https://peterwalker78.github.io/human-again/img/og.png">
+<link rel="preload" href="fonts/Fraunces-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="img/attractor.webp" as="image" fetchpriority="high">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://peterwalker78.github.io/human-again/#site",
+      "url": "https://peterwalker78.github.io/human-again/",
+      "name": "Human Again",
+      "description": "Free, open-source Linux software built to give people their attention back.",
+      "inLanguage": "en-GB",
+      "publisher": { "@id": "https://peterwalker78.github.io/human-again/#peter" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://peterwalker78.github.io/human-again/#peter",
+      "name": "Peter Walker",
+      "url": "https://github.com/peterwalker78",
+      "sameAs": ["https://github.com/peterwalker78"],
+      "description": "Directs Slipstream, Glimmerwood and Westering: their vision, design decisions and testing. The code is written by AI."
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://peterwalker78.github.io/human-again/#page",
+      "url": "https://peterwalker78.github.io/human-again/",
+      "name": "Human Again: Slipstream, Glimmerwood and Westering",
+      "isPartOf": { "@id": "https://peterwalker78.github.io/human-again/#site" },
+      "about": [
+        { "@id": "https://github.com/peterwalker78/slipstream-desktop#app" },
+        { "@id": "https://github.com/peterwalker78/glimmerwood#app" },
+        { "@id": "https://github.com/peterwalker78/westering#app" }
+      ],
+      "primaryImageOfPage": "https://peterwalker78.github.io/human-again/img/og.png",
+      "dateModified": "2026-10-28",
+      "inLanguage": "en-GB",
+      "citation": [
+        "https://doi.org/10.1145/1357054.1357072",
+        "https://doi.org/10.1521/jscp.2018.37.10.751",
+        "https://doi.org/10.1073/pnas.1418490112",
+        "https://doi.org/10.1037/0022-3514.84.2.377",
+        "https://doi.org/10.1016/S0065-2601(06)38002-1",
+        "https://doi.org/10.3389/fnhum.2018.00353",
+        "https://doi.org/10.1037/pspi0000018",
+        "https://doi.org/10.1037/emo0000442",
+        "https://digital-strategy.ec.europa.eu/en/news/commission-preliminarily-finds-tiktoks-addictive-design-breach-digital-services-act"
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://github.com/peterwalker78/slipstream-desktop#app",
+      "name": "Slipstream",
+      "description": "A keyboard-first desktop for Linux, with its own Wayland compositor written in Rust. It holds notifications until you pause typing, shows what put-away apps are doing as streams of light at the screen's edge, and measures nothing about you.",
+      "applicationCategory": "DesktopEnhancementApplication",
+      "operatingSystem": "Linux (x86_64)",
+      "softwareVersion": "1.0 release candidate",
+      "url": "https://github.com/peterwalker78/slipstream-desktop",
+      "downloadUrl": "https://github.com/peterwalker78/slipstream-desktop/releases",
+      "license": "https://www.gnu.org/licenses/gpl-3.0.html",
+      "isAccessibleForFree": true,
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
+      "image": "https://peterwalker78.github.io/human-again/img/vortex-still.webp",
+      "author": { "@id": "https://peterwalker78.github.io/human-again/#peter" }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://github.com/peterwalker78/glimmerwood#app",
+      "name": "Glimmerwood",
+      "description": "A quiet, private web browser for Linux. Its companion, the wisp, brightens when you read, learn or make something and grows sleepy in an endless feed. It never blocks or nags, and nothing about you leaves your computer.",
+      "applicationCategory": "BrowserApplication",
+      "operatingSystem": "Linux (x86_64), Flatpak",
+      "url": "https://github.com/peterwalker78/glimmerwood",
+      "downloadUrl": "https://github.com/peterwalker78/glimmerwood/releases/latest/download/glimmerwood-x86_64.flatpak",
+      "license": "https://www.gnu.org/licenses/gpl-3.0.html",
+      "isAccessibleForFree": true,
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
+      "image": "https://peterwalker78.github.io/human-again/img/browsing.webp",
+      "author": { "@id": "https://peterwalker78.github.io/human-again/#peter" }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://github.com/peterwalker78/westering#app",
+      "name": "Westering",
+      "description": "A small stargazing game for the end of the day. It draws tonight's real sky, helps you set down what's on your mind and remember the people who are there for you, then suggests you go and look at the real stars, or go to bed. No network access at all.",
+      "applicationCategory": "GameApplication",
+      "operatingSystem": "Linux (x86_64), Flatpak",
+      "url": "https://github.com/peterwalker78/westering",
+      "downloadUrl": "https://github.com/peterwalker78/westering/releases/latest/download/westering-x86_64.flatpak",
+      "license": "https://www.gnu.org/licenses/gpl-3.0.html",
+      "isAccessibleForFree": true,
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
+      "image": "https://peterwalker78.github.io/human-again/img/ws-hello.webp",
+      "author": { "@id": "https://peterwalker78.github.io/human-again/#peter" }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://peterwalker78.github.io/human-again/#questions",
+      "mainEntity": [
+        { "@type": "Question", "name": "What is Human Again?", "acceptedAnswer": { "@type": "Answer", "text": "Human Again is the shared aim of three free Linux apps: Slipstream, a keyboard-first desktop; Glimmerwood, a quiet web browser; and Westering, a night-sky game for winding down. Each is built to give people their attention back rather than to hold on to it." } },
+        { "@type": "Question", "name": "Are they free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. All three are free and open source under the GNU GPL, version 3 or later, with no accounts, adverts or paid tiers." } },
+        { "@type": "Question", "name": "Was the code written by AI?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. All of the code is written by AI (Claude, by Anthropic). The vision, the design decisions and the testing come from Peter Walker, who uses all three apps every day. None of the apps has AI features, and none ever will." } },
+        { "@type": "Question", "name": "Do they collect any data?", "acceptedAnswer": { "@type": "Answer", "text": "No. There is no telemetry and no account. Glimmerwood's only network traffic is the pages you visit, and Westering has no network permission at all." } },
+        { "@type": "Question", "name": "Which computers do they run on?", "acceptedAnswer": { "@type": "Answer", "text": "x86_64 Linux. Slipstream needs Debian 13's libraries or newer and is tested on Debian, Ubuntu, Fedora, Arch and openSUSE. Glimmerwood and Westering are Flatpaks that run on any Linux desktop. There are no Windows or macOS versions." } },
+        { "@type": "Question", "name": "Can I use one without the others?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Each is its own project. Slipstream's installer offers the other two, but Glimmerwood and Westering run on any Linux desktop." } }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+@font-face { font-family: "Fraunces"; src: url(fonts/Fraunces-normal.woff2) format("woff2"); font-weight: 300 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Fraunces"; src: url(fonts/Fraunces-italic.woff2) format("woff2"); font-weight: 300 500; font-style: italic; font-display: swap; }
+@font-face { font-family: "Atkinson"; src: url(fonts/AtkinsonHyperlegible-Regular.ttf) format("truetype"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Atkinson"; src: url(fonts/AtkinsonHyperlegible-Bold.ttf) format("truetype"); font-weight: 700; font-display: swap; }
+@font-face { font-family: "JBMono"; src: url(fonts/JetBrainsMono-Regular.ttf) format("truetype"); font-weight: 400; font-display: swap; }
+
+/* Layout: the night sky by default, with paper bands for reading-heavy sections; one 1160px column, stacking to one at phone width. */
+:root {
+  color-scheme: dark;
+  --night: #10141c; --night-2: #171c27; --rule: #2a3240;
+  --ink: #ede8dc; --soft: #bab6ac; --mute: #8a92a1;
+  --paper: #f3eee3; --paper-2: #e8e1d2; --paper-rule: #d6cdbb;
+  --p-ink: #1b1e25; --p-soft: #474a52; --p-mute: #7a7565;
+  --ss: #3cf0bf; --gw: #e8a33c; --gw-deep: #9a6214; --ws: #ffb86b; --ws-blue: #93abff; --ss-deep: #127a62; --ws-deep: #4a5fb0;
+  --display: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --body: "Atkinson", "Segoe UI", system-ui, sans-serif;
+  --mono: "JBMono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --gut-l: max(clamp(16px, 4vw, 44px), env(safe-area-inset-left, 0px));
+  --gut-r: max(clamp(16px, 4vw, 44px), env(safe-area-inset-right, 0px));
+}
+html { scroll-behavior: smooth; scroll-padding-top: calc(64px + env(safe-area-inset-top, 0px)); }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body { margin: 0; background: var(--night); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--ws); outline-offset: 3px; border-radius: 3px; }
+h1, h2, h3 { font-family: var(--display); font-weight: 400; letter-spacing: -.012em; text-wrap: balance; margin: 0; }
+h2 { font-size: clamp(32px, 5vw, 52px); line-height: 1.05; }
+h3 { font-size: clamp(21px, 2.4vw, 25px); line-height: 1.2; }
+p { margin: 0; }
+p + p { margin-top: .8em; }
+.wrap { max-width: 1160px; margin-inline: auto; padding-left: var(--gut-l); padding-right: var(--gut-r); }
+.band { padding-block: clamp(64px, 9vw, 120px); }
+.paper { background: var(--paper); color: var(--p-ink); }
+.dark { background: var(--night); color: var(--ink); }
+.dark p, .dark li, .dark dd { color: var(--soft); }
+.paper p, .paper li, .paper dd, .paper td { color: var(--p-soft); }
+.dark strong { color: var(--ink); }
+.paper strong { color: var(--p-ink); }
+.kicker { font-family: var(--mono); font-size: 12px; letter-spacing: .16em; text-transform: uppercase; display: block; margin-bottom: 16px; }
+.dark .kicker { color: var(--mute); }
+.paper .kicker { color: var(--p-mute); }
+.lead { font-size: clamp(19px, 2vw, 22px); line-height: 1.45; }
+.dark .lead { color: var(--ink); }
+.paper .lead { color: var(--p-ink); }
+.measure { max-width: 64ch; }
+.cap { font-family: var(--mono); font-size: 12.5px; line-height: 1.5; margin-top: 10px; }
+.dark .cap { color: var(--mute); }
+.paper .cap { color: var(--p-mute); }
+.shot { border-radius: 10px; width: 100%; }
+.dark .shot { box-shadow: 0 0 0 1px var(--rule), 0 14px 40px rgba(0,0,0,.45); }
+.paper .shot { box-shadow: 0 0 0 1px var(--paper-rule), 0 14px 36px rgba(60,48,24,.16); }
+code, pre { font-family: var(--mono); font-size: .86em; }
+ul.dots { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; }
+ul.dots li { position: relative; padding-left: 22px; }
+ul.dots li::before { content: ""; position: absolute; left: 0; top: .62em; width: 7px; height: 7px; background: var(--c, currentColor); }
+.grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(28px, 4vw, 56px); }
+.grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(20px, 3vw, 36px); }
+.stack { display: grid; gap: 22px; align-content: start; }
+.stack > * { min-width: 0; }
+@media (max-width: 860px) { .grid-2, .grid-3 { grid-template-columns: minmax(0, 1fr); } }
+
+/* nav */
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--night); }
+.nav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 9; background: rgba(16,20,28,.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--rule); }
+.nav .wrap { display: flex; align-items: center; gap: 24px; height: 56px; }
+.nav .brand { font-family: var(--display); font-size: 19px; text-decoration: none; white-space: nowrap; color: var(--ink); }
+.nav .brand i { color: var(--ws); }
+.nav .links { display: flex; gap: 22px; overflow-x: auto; scrollbar-width: none; min-width: 0; margin-left: auto; font-size: 14.5px; }
+.nav .links::-webkit-scrollbar { display: none; }
+.nav .links a { text-decoration: none; color: var(--soft); white-space: nowrap; padding-block: 6px; }
+.nav .links a:hover { color: var(--ink); }
+
+/* hero */
+.hero { position: relative; overflow: hidden; background: #131720; }
+.hero .art { position: absolute; inset: 0 auto 0 0; width: min(78%, 1100px); }
+.hero .art img { width: 100%; height: 100%; object-fit: cover; object-position: 60% 50%; }
+.hero .art::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(19,23,32,0) 45%, #131720 97%); }
+.hero .wrap { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 520px); padding-block: clamp(80px, 12vw, 150px) clamp(56px, 8vw, 100px); }
+.hero .copy { grid-column: 2; }
+.hero h1 { font-size: clamp(64px, 10vw, 124px); line-height: .88; font-weight: 400; letter-spacing: -.03em; }
+.hero h1 i { font-weight: 300; color: var(--ws); }
+.hero .sub { font-family: var(--display); font-style: italic; font-size: clamp(22px, 2.6vw, 28px); margin: 28px 0 18px; color: var(--ink); }
+.hero p { color: var(--soft); max-width: 46ch; }
+.trio { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 40px; }
+.trio a { display: block; text-decoration: none; padding: 14px 14px 13px; border: 1px solid var(--rule); border-radius: 8px; background: rgba(16,20,28,.6); transition: border-color .2s; }
+.trio a:hover { border-color: var(--c); }
+.trio b { display: block; font-family: var(--display); font-weight: 500; font-size: 16.5px; white-space: nowrap; color: var(--ink); }
+.trio b::before { content: ""; display: inline-block; width: 8px; height: 8px; background: var(--c); margin-right: 8px; vertical-align: 2px; }
+.trio span { display: block; font-size: 13px; line-height: 1.35; color: var(--mute); margin-top: 4px; }
+.made { margin-top: 26px; font-family: var(--mono); font-size: 12.5px; color: var(--mute); }
+.made a { color: var(--ink); }
+@media (max-width: 860px) {
+  .hero .art { position: relative; width: auto; height: 300px; margin-bottom: -60px; }
+  .hero .art::after { background: linear-gradient(180deg, rgba(19,23,32,0) 50%, #131720 100%); }
+  .hero .wrap { grid-template-columns: minmax(0, 1fr); padding-top: 0; }
+  .hero .copy { grid-column: 1; }
+}
+@media (max-width: 520px) { .trio { grid-template-columns: minmax(0, 1fr); } }
+
+/* problem */
+.problem .grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: clamp(32px, 5vw, 64px); align-items: center; }
+.problem .art { background: var(--night); border-radius: 12px; padding: 12px; }
+.problem .art .cap { color: var(--mute); padding: 0 8px 4px; }
+.facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-top: 44px; border-top: 2px solid var(--p-ink); padding-top: 20px; }
+.facts .big { font-family: var(--display); font-size: clamp(28px, 3vw, 36px); line-height: 1; color: var(--p-ink); margin-bottom: 10px; }
+.facts p { font-size: 15px; line-height: 1.5; }
+.src { display: block; font-family: var(--mono); font-size: 12px; line-height: 1.45; margin-top: 8px; }
+.paper .src, .paper .src a { color: var(--p-mute); }
+.dark .src, .dark .src a { color: var(--mute); }
+@media (max-width: 860px) { .problem .grid, .facts { grid-template-columns: minmax(0, 1fr); } }
+
+/* belief */
+.belief blockquote { margin: 0 auto; max-width: 22ch; text-align: center; font-family: var(--display); font-style: italic; font-weight: 300; font-size: clamp(34px, 5.4vw, 60px); line-height: 1.1; letter-spacing: -.015em; text-wrap: balance; }
+.belief blockquote em { font-style: normal; font-weight: 400; color: var(--ws); }
+.belief .after { text-align: center; max-width: 58ch; margin: 28px auto 0; }
+.apps { margin-top: clamp(48px, 7vw, 80px); }
+.app { border-top: 1px solid var(--rule); padding-top: 22px; display: grid; grid-template-columns: 56px minmax(0, 1fr); gap: 16px; align-items: start; }
+.app img { width: 56px; height: 56px; border-radius: 12px; object-fit: contain; }
+.when { display: block; font-family: var(--mono); font-size: 11.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--c); margin-bottom: 4px; }
+.app p { font-size: 15.5px; line-height: 1.5; margin-top: 6px; }
+
+/* day */
+.day { padding-top: 0; }
+.day .sky { position: relative; }
+.day .sky img { width: 100%; height: clamp(220px, 34vw, 440px); object-fit: cover; object-position: 50% 100%; }
+.day .sky .wrap { position: absolute; inset: 0; padding-top: clamp(40px, 6vw, 72px); }
+.moments { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 36px 28px; margin-top: 36px; }
+.moments > div { border-top: 3px solid var(--c); padding-top: 14px; }
+.moments .t { font-family: var(--mono); font-size: 22px; color: var(--ink); font-variant-numeric: tabular-nums; }
+.moments .a { font-family: var(--mono); font-size: 11.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--c); margin: 2px 0 8px; }
+.moments p { font-size: 15.5px; line-height: 1.5; }
+@media (max-width: 860px) { .moments { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 520px) { .moments { grid-template-columns: minmax(0, 1fr); } }
+
+/* product sections */
+.prod-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr); gap: clamp(32px, 5vw, 64px); align-items: center; }
+.prod-head .tag { font-family: var(--display); font-style: italic; font-size: clamp(22px, 2.4vw, 27px); line-height: 1.3; margin: 18px 0 16px; }
+.dark .prod-head .tag { color: var(--ink); }
+.paper .prod-head .tag { color: var(--p-ink); }
+.wordmark { width: min(360px, 100%); margin-bottom: 18px; }
+.pull { font-family: var(--display); font-style: italic; font-size: clamp(24px, 2.6vw, 30px); line-height: 1.2; border-left: 3px solid var(--c); padding-left: 18px; margin-top: 28px; color: var(--ink); }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+.chip { font-family: var(--mono); font-size: 12px; padding: 4px 10px; border: 1px solid var(--rule); border-radius: 5px; color: var(--soft); }
+.sub-sec { margin-top: clamp(72px, 10vw, 128px); }
+.sub-sec > .kicker { color: var(--c); }
+.feature { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: clamp(28px, 4vw, 56px); align-items: start; margin-top: 28px; }
+.feature.flip { grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); }
+.streams { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 22px; align-items: start; }
+.streams img { border-radius: 8px; box-shadow: 0 0 0 1px var(--rule); }
+.walls { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin-top: 32px; }
+.walls img { border-radius: 8px; aspect-ratio: 16 / 10; object-fit: cover; width: 100%; }
+.walls b { display: block; font-family: var(--display); font-weight: 500; font-size: 19px; color: var(--ink); margin-top: 10px; }
+.walls span { display: block; font-size: 14.5px; line-height: 1.45; color: var(--mute); }
+.note { margin-top: 32px; padding: 20px 22px; background: var(--night-2); border-radius: 10px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.note p { font-size: 15.5px; }
+@media (max-width: 860px) {
+  .prod-head, .feature, .feature.flip, .note { grid-template-columns: minmax(0, 1fr); }
+  .walls { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 520px) { .walls { grid-template-columns: minmax(0, 1fr); } .streams { grid-template-columns: 90px minmax(0, 1fr); } }
+
+/* install */
+.install { margin-top: 40px; padding: 22px; border-radius: 10px; border: 1px solid var(--rule); }
+.paper .install { border-color: var(--paper-rule); background: var(--paper-2); }
+.install h3 { font-size: 21px; margin-bottom: 8px; }
+.cmd { position: relative; margin-top: 14px; }
+.cmd pre { margin: 0; padding: 14px 92px 14px 16px; border-radius: 8px; background: #0b0e14; color: var(--ss); overflow-x: auto; white-space: pre; line-height: 1.55; font-size: 13.5px; }
+.cmd button { position: absolute; top: 8px; right: 8px; font-family: var(--mono); font-size: 12px; padding: 6px 10px; border-radius: 5px; border: 1px solid #39424f; background: #1a202b; color: var(--ink); cursor: pointer; }
+.cmd button:hover { border-color: var(--ss); }
+
+/* glimmerwood */
+.gw .icon { width: 84px; margin-bottom: 14px; }
+.wisps { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 14px; margin-top: 40px; }
+.wisps img { border-radius: 8px; width: 100%; }
+.wisps b { display: block; font-family: var(--display); font-weight: 500; font-size: 17px; color: var(--p-ink); margin-top: 8px; }
+.wisps span { display: block; font-size: 13.5px; line-height: 1.35; color: var(--p-mute); }
+@media (max-width: 860px) { .wisps { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 520px) { .wisps { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* westering */
+.ws-hero { position: relative; overflow: hidden; }
+.ws-hero > img { width: 100%; height: clamp(360px, 52vw, 640px); object-fit: cover; object-position: 30% 40%; }
+.ws-hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, var(--night) 4%, rgba(16,20,28,.75) 35%, rgba(16,20,28,0) 62%); pointer-events: none; }
+.ws-hero .wrap { position: absolute; inset: auto 0 0; z-index: 1; padding-bottom: 8px; }
+.ws-hero .icon { width: 56px; margin-bottom: 10px; }
+.def { font-family: var(--display); font-style: italic; color: var(--ws); margin: 10px 0 0; font-size: 18px; }
+.parts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; margin-top: 28px; }
+.parts > div { border-top: 1px solid var(--rule); padding-top: 14px; }
+.parts .n { font-family: var(--display); font-style: italic; font-size: 30px; color: var(--ws); line-height: 1; }
+.parts h3 { margin: 8px 0 6px; font-size: 21px; }
+.parts p { font-size: 15.5px; line-height: 1.5; }
+.lastline { margin-top: 28px; padding: 18px 20px; border-left: 3px solid var(--ws); background: var(--night-2); font-family: var(--display); font-style: italic; font-size: 20px; line-height: 1.4; color: var(--ink); }
+@media (max-width: 860px) { .parts { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 520px) { .parts { grid-template-columns: minmax(0, 1fr); } }
+
+/* made by */
+.madeby .figs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(24px, 4vw, 48px); margin-top: 44px; }
+.figs section { min-width: 0; }
+.figs h3 { padding-bottom: 12px; border-bottom: 1px solid var(--rule); margin-bottom: 4px; }
+.figs dl { margin: 0; }
+.figs dl > div { display: grid; grid-template-columns: clamp(92px, 11vw, 132px) minmax(0, 1fr); gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--rule); align-items: baseline; }
+.figs dt { font-family: var(--display); font-size: clamp(32px, 4vw, 42px); line-height: 1; color: var(--c); font-variant-numeric: tabular-nums; }
+.figs dd { margin: 0; font-size: 15.5px; line-height: 1.45; }
+.figs dd strong { display: block; font-size: 16.5px; }
+.method { margin-top: 24px; font-size: 14px; color: var(--mute); max-width: 80ch; }
+.moments-ai { margin-top: 48px; }
+.moments-ai article { border-top: 1px solid var(--rule); padding-top: 16px; }
+.moments-ai h3 { font-size: 20px; margin-bottom: 6px; }
+.moments-ai p { font-size: 15.5px; line-height: 1.5; }
+@media (max-width: 860px) { .madeby .figs { grid-template-columns: minmax(0, 1fr); } }
+
+/* science */
+.sci-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: clamp(32px, 5vw, 64px); }
+.sci-table { width: 100%; border-collapse: collapse; }
+.sci-table th { text-align: left; font-family: var(--mono); font-weight: 400; font-size: 11.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--p-mute); padding: 0 16px 10px 0; border-bottom: 2px solid var(--p-ink); }
+.sci-table td { vertical-align: top; padding: 14px 16px 14px 0; border-bottom: 1px solid var(--paper-rule); font-size: 15px; line-height: 1.45; }
+.sci-table td strong { color: var(--p-ink); }
+.sci-table .app-name { font-family: var(--mono); font-size: 11.5px; letter-spacing: .1em; text-transform: uppercase; white-space: nowrap; padding-right: 0; }
+@media (max-width: 860px) {
+  .sci-grid { grid-template-columns: minmax(0, 1fr); }
+  .sci-table thead { display: none; }
+  .sci-table, .sci-table tbody, .sci-table tr, .sci-table td { display: block; }
+  .sci-table tr { border-bottom: 1px solid var(--paper-rule); padding: 14px 0; }
+  .sci-table td { border: 0; padding: 2px 0; }
+}
+
+/* technical */
+.cards { margin-top: 40px; }
+.card { background: var(--night-2); border-radius: 10px; padding: 24px 22px; border-top: 3px solid var(--c); min-width: 0; }
+.card .stackline { font-family: var(--mono); font-size: 12.5px; color: var(--c); margin: 6px 0 4px; }
+.card dl { margin: 0; }
+.card dt { font-family: var(--mono); font-size: 11.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--mute); margin-top: 16px; }
+.card dd { margin: 4px 0 0; font-size: 15px; line-height: 1.5; }
+.edges { margin-top: 32px; padding-top: 20px; border-top: 1px solid var(--rule); }
+.edges p { font-size: 15.5px; }
+
+/* promises + now */
+.promises { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 28px; margin-top: 28px; }
+.promises div { border-top: 1px solid var(--paper-rule); padding-top: 12px; }
+.promises b { display: block; font-family: var(--display); font-weight: 500; font-size: 19px; color: var(--p-ink); margin-bottom: 4px; }
+.promises p { font-size: 15px; line-height: 1.45; }
+.timeline { margin-top: 24px; }
+.timeline > div { display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 16px; padding: 14px 0; border-top: 1px solid var(--paper-rule); }
+.timeline .d { font-family: var(--mono); font-size: 13px; color: var(--p-ink); padding-top: 2px; font-variant-numeric: tabular-nums; }
+.timeline p { font-size: 15.5px; line-height: 1.45; }
+.so { margin-top: 22px; font-family: var(--display); font-style: italic; font-size: 21px; line-height: 1.4; color: var(--p-ink); }
+@media (max-width: 520px) { .promises { grid-template-columns: minmax(0, 1fr); } }
+
+/* questions */
+.faq { margin-top: 32px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 48px; }
+.faq div { border-top: 1px solid var(--rule); padding: 18px 0 22px; min-width: 0; }
+.faq dt { font-family: var(--display); font-size: 21px; color: var(--ink); margin-bottom: 6px; }
+.faq dd { margin: 0; font-size: 15.5px; line-height: 1.5; }
+@media (max-width: 860px) { .faq { grid-template-columns: minmax(0, 1fr); } }
+
+/* join */
+.ways { margin-top: 40px; }
+.way { background: var(--night-2); border-radius: 10px; padding: 22px; min-width: 0; }
+.way .n { font-family: var(--display); font-size: 34px; line-height: 1; color: var(--ws); margin-bottom: 10px; }
+.way h3 { font-size: 22px; margin-bottom: 6px; }
+.way p { font-size: 15.5px; line-height: 1.5; }
+.next { margin-top: 48px; }
+
+/* footer */
+.foot { position: relative; overflow: hidden; background: var(--night); }
+.foot > img { width: 100%; height: clamp(380px, 52vw, 640px); object-fit: cover; object-position: 70% 100%; }
+.foot .over { position: absolute; inset: 0; display: grid; place-items: start center; padding-top: clamp(56px, 9vw, 120px); text-align: center; }
+.foot h2 { font-size: clamp(40px, 6.4vw, 76px); font-weight: 300; line-height: 1.04; }
+.foot h2 i { color: var(--ws); }
+.foot .over p { margin-top: 18px; color: var(--soft); max-width: 46ch; margin-inline: auto; }
+.fine { background: #0b0e14; padding-block: 36px 48px; font-size: 14px; color: var(--mute); }
+.fine .row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.fine b { display: block; font-family: var(--display); font-weight: 500; font-size: 18px; color: var(--ink); margin-bottom: 2px; }
+.fine a { color: var(--soft); word-break: break-word; }
+.fine .small { margin-top: 28px; padding-top: 18px; border-top: 1px solid var(--rule); font-size: 13px; line-height: 1.6; }
+@media (max-width: 860px) { .fine .row { grid-template-columns: minmax(0, 1fr); } }
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Sections">
+  <div class="wrap">
+    <a class="brand" href="#top">Human <i>again</i></a>
+    <div class="links">
+      <a href="#slipstream">Slipstream</a>
+      <a href="#glimmerwood">Glimmerwood</a>
+      <a href="#westering">Westering</a>
+      <a href="#made-by">Who made it</a>
+      <a href="#why-it-works">Why it works</a>
+      <a href="#questions">Questions</a>
+    </div>
+  </div>
+</nav>
+
+<main id="top">
+
+<header class="hero">
+  <div class="art"><img src="img/attractor.webp" width="1800" height="1275" alt="" fetchpriority="high"></div>
+  <div class="wrap">
+    <div class="copy">
+      <span class="kicker">Slipstream · Glimmerwood · Westering</span>
+      <h1>Human <i>again.</i></h1>
+      <p class="sub">Software that's on your side.</p>
+      <p>A desktop, a web browser and a night sky for Linux, made to give people back their attention, their evenings and the hours a screen was quietly taking. Free and open source.</p>
+      <div class="trio">
+        <a href="#slipstream" style="--c:var(--ss)"><b>Slipstream</b><span>the desktop, for when you work</span></a>
+        <a href="#glimmerwood" style="--c:var(--gw)"><b>Glimmerwood</b><span>the browser, for when you're online</span></a>
+        <a href="#westering" style="--c:var(--ws-blue)"><b>Westering</b><span>the night sky, for when the day is done</span></a>
+      </div>
+      <p class="made">Written by AI. Directed by <a href="#made-by">Peter Walker</a>.</p>
+    </div>
+  </div>
+</header>
+
+<section class="band paper problem" id="problem" aria-labelledby="problem-h">
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <span class="kicker">The problem</span>
+        <h2 id="problem-h">Most screens are built to keep you.</h2>
+        <p class="lead" style="margin-top:24px">You open the laptop to check one thing. You look up and an hour has gone, and whatever you sat down to do is still waiting.</p>
+        <p style="margin-top:16px">That isn't a lack of willpower. Feeds, notifications and autoplay are designed, tested and tuned by very large teams to hold on to you, because your attention is what they sell. Every other piece of software on your computer treats that hour exactly like an hour spent learning, making something, or talking to someone you love.</p>
+      </div>
+      <figure class="art" style="margin:0">
+        <img src="img/art-drain.webp" width="1500" height="1500" loading="lazy" alt="Thousands of grey dots wound into a whirlpool, and one warm dot travelling out of it.">
+        <figcaption class="cap">The pull, and one way out of it.</figcaption>
+      </figure>
+    </div>
+    <div class="facts">
+      <div><div class="big">47 seconds</div><p>How long, on average, people stayed on one screen before switching, in workplace studies since 2016. In 2003 it was about two and a half minutes.</p><span class="src">Gloria Mark, <i>Attention Span</i>, 2023</span></div>
+      <div><div class="big">More stress</div><p>Interrupted people make up the time by working faster, and pay for it in stress, frustration and time pressure.</p><span class="src"><a href="https://doi.org/10.1145/1357054.1357072">Mark, Gudith &amp; Klocke, CHI 2008</a></span></div>
+      <div><div class="big">In breach</div><p>In February 2026 the European Commission's preliminary view was that TikTok's infinite scroll, autoplay and push notifications breach EU law.</p><span class="src"><a href="https://digital-strategy.ec.europa.eu/en/news/commission-preliminarily-finds-tiktoks-addictive-design-breach-digital-services-act">European Commission, 6 Feb 2026</a></span></div>
+    </div>
+  </div>
+</section>
+
+<section class="band dark belief" aria-labelledby="belief-h">
+  <div class="wrap">
+    <span class="kicker" style="text-align:center" id="belief-h">What we believe</span>
+    <blockquote>Software should be judged by how well you live when you're <em>not</em> using it.</blockquote>
+    <p class="after">So we're building the other kind: three free apps that guard your attention while you work, tell you the truth about your time online, and, when the day is done, send you outside.</p>
+    <div class="grid-3 apps">
+      <div class="app" style="--c:var(--ss)"><img src="img/ss-ring.webp" width="192" height="192" alt="Slipstream's logo"><div><span class="when">When you work</span><h3>Slipstream</h3><p>A whole Linux desktop, keyboard-first, where nothing interrupts you while you're typing.</p></div></div>
+      <div class="app" style="--c:var(--gw)"><img src="img/gw-icon.svg" width="56" height="56" alt="Glimmerwood's icon: the wisp on moss"><div><span class="when">When you're online</span><h3>Glimmerwood</h3><p>A quiet browser whose small companion brightens when you learn or make something, and grows sleepy in an endless feed.</p></div></div>
+      <div class="app" style="--c:var(--ws-blue)"><img src="img/ws-icon.svg" width="56" height="56" alt="Westering's icon: a warm star low over a mossy horizon"><div><span class="when">When the day is done</span><h3>Westering</h3><p>A few quiet minutes under tonight's real sky, and then it suggests you go and look at the real stars, or go to bed.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="band dark day" aria-labelledby="day-h">
+  <div class="sky">
+    <img src="img/art-day.webp" width="1800" height="675" loading="lazy" alt="The Sun's path across one day, drawn in dots: teal in the working morning, amber in the afternoon, setting into a starry night over a mossy horizon.">
+    <div class="wrap"><span class="kicker">A day with all three</span><h2 id="day-h">From the first key<br>to the last light.</h2></div>
+  </div>
+  <div class="wrap">
+    <div class="moments">
+      <div style="--c:var(--ss)"><div class="t">09:00</div><div class="a">Slipstream</div><p>Your apps open where you left them yesterday, and every window is a keystroke away.</p></div>
+      <div style="--c:var(--ss)"><div class="t">10:40</div><div class="a">Slipstream</div><p>Three messages arrive while you're typing. Nothing pops up until you pause.</p></div>
+      <div style="--c:var(--gw)"><div class="t">16:30</div><div class="a">Glimmerwood</div><p>Deep in a feed, the little flame in the corner grows sleepy. Nothing stops you; you just see it.</p></div>
+      <div style="--c:var(--gw)"><div class="t">19:00</div><div class="a">Glimmerwood</div><p>A new tab opens on a garden. A day of learning grew ferns.</p></div>
+      <div style="--c:var(--ws-blue)"><div class="t">22:30</div><div class="a">Westering</div><p>Under tonight's real sky you write down what's on your mind, and it becomes a star low in the west.</p></div>
+      <div style="--c:var(--ws-blue)"><div class="t">22:50</div><div class="a">Westering</div><p>A few slow breaths, the screen dims, and the last line points outside: Saturn is up in the south-east.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Slipstream -->
+<section class="band dark" id="slipstream" aria-labelledby="ss-h" style="--c:var(--ss)">
+  <div class="wrap">
+    <div class="prod-head">
+      <div>
+        <span class="kicker" style="color:var(--ss)">The desktop</span>
+        <img class="wordmark" src="img/wordmark-dark.svg" width="260" height="26" alt="Slipstream">
+        <h2 id="ss-h">The desktop that's on your side.</h2>
+        <p class="tag">A keyboard-first desktop for Linux, in one download that installs beside the one you have.</p>
+        <p>It holds your notifications until you pause, shows you what's going on without asking for a look, and measures nothing about you. Good-looking enough that you want to sit down at it; quiet enough that you get lost in the work rather than the machine.</p>
+        <p class="pull">A workshop, not a slot machine.</p>
+        <div class="chips"><span class="chip">Wayland compositor</span><span class="chip">Rust</span><span class="chip">Release candidate for 1.0</span><span class="chip">GPL-3.0-or-later</span></div>
+      </div>
+      <figure style="margin:0">
+        <picture><source media="(prefers-reduced-motion: reduce)" srcset="img/hero-still.webp"><img class="shot" src="img/hero.webp" width="960" height="600" loading="lazy" alt="A Slipstream desktop with a note, a to-do list and Settings tips back and sinks into the Vortex living wallpaper, which takes over the screen, then rises back into place."></picture>
+        <figcaption class="cap">Step away and your windows sink into a living wallpaper; one key brings them back. Recorded from Slipstream itself.</figcaption>
+      </figure>
+    </div>
+
+    <div class="sub-sec">
+      <span class="kicker">Concentration first</span>
+      <h2>Nothing interrupts you.</h2>
+      <div class="feature">
+        <div class="stack">
+          <p class="lead">You know the moment: halfway through a thought, something pops up, and the thought is gone. Slipstream can tell <i>that</i> you're typing, never what, and keeps that moment yours.</p>
+          <figure style="margin:0">
+            <picture><source media="(prefers-reduced-motion: reduce)" srcset="img/concentration-still.webp"><img class="shot" src="img/concentration.webp" width="960" height="132" loading="lazy" alt="Typing in a terminal while the bell on the bar counts three notifications and nothing pops up. At the pause, one card appears: 3 while you were typing."></picture>
+            <figcaption class="cap">Three messages arrive while you type. Nothing pops up until you pause.</figcaption>
+          </figure>
+          <ul class="dots">
+            <li><strong>Notifications wait for a pause,</strong> then arrive together as one card. Urgent ones never wait, and nothing waits more than fifteen minutes.</li>
+            <li><strong>Windows you didn't ask for can't barge in</strong> or run off with your keyboard. They pour into a stream at the edge of the screen instead.</li>
+            <li><strong>Hold Caps Lock for Awake,</strong> and the screen won't fade or lock by itself until you hold it again.</li>
+            <li><strong>Nothing records your screen</strong> without asking you first, by name.</li>
+          </ul>
+        </div>
+        <div class="streams">
+          <picture><source media="(prefers-reduced-motion: reduce)" srcset="img/streams-slipstream-still.webp"><img src="img/streams-slipstream.webp" width="300" height="900" loading="lazy" alt="The right edge of the screen: a window pours into a new stream of light beside two already running, each under its app's icon. The busy app's stream pours fast and bright; the idle one sends a few slow grey streaks."></picture>
+          <div>
+            <h3>What you put away keeps you posted.</h3>
+            <p style="margin-top:10px">Put a window away and it pours down the side of the screen as a stream of light, still running.</p>
+            <p>A busy app pours fast and bright; a quiet one sends a few slow grey streaks. A download finishing catches your eye without you going to look.</p>
+            <p>Rest the pointer on a stream to see what it's using right now. Click it to bring the window back.</p>
+          </div>
+        </div>
+      </div>
+      <div class="note">
+        <p><strong>No telemetry, ever.</strong> What you do on your computer stays on your computer. It never checks for updates by itself.</p>
+        <p><strong>No AI features, ever,</strong> and nothing built to keep you looking for longer than you meant to.</p>
+      </div>
+    </div>
+
+    <div class="sub-sec">
+      <span class="kicker">The keyboard</span>
+      <h2>Every window, one key away.</h2>
+      <div class="feature">
+        <figure style="margin:0">
+          <picture><source media="(prefers-reduced-motion: reduce)" srcset="img/bullet-still.webp"><img class="shot" src="img/bullet.webp" width="960" height="600" loading="lazy" alt="Bullet time: the desktop tips back into 3D with every workspace beside the last and an amber letter over each window; a key press glides across to the next workspace, and Enter drops back into it."></picture>
+          <figcaption class="cap">Bullet time: every workspace laid out, a letter on each window, everything slowed to a quarter of its speed.</figcaption>
+        </figure>
+        <div class="stack">
+          <p class="lead">One shortcut tips the whole desktop back. Press a letter and you land on that window.</p>
+          <ul class="dots">
+            <li><strong>Keys your hands already know.</strong> Windows' keys from the start, or a Mac's or Omarchy's habits instead, and every hint on screen follows your choice.</li>
+            <li><strong>Tiling that isn't all or nothing.</strong> Hold Super+T and pick an arrangement from pictures of your own windows.</li>
+            <li><strong>An explorer that answers.</strong> Tap Super and type an app, a setting, a file, <code>15% of 80</code> or <code>5 km in miles</code>.</li>
+            <li><strong>New to tiling? Take the tour.</strong> Fourteen short lessons start from the keys you know, say why before what to press, and play out on a miniature of your own desktop.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-sec">
+      <span class="kicker">The living wallpaper</span>
+      <h2>Step away, and it comes alive.</h2>
+      <p class="measure" style="margin-top:18px">There are twenty wallpapers, and most aren't animations at all: they're worked out live as you watch, so they never run quite the same way twice. Whichever you choose runs behind your windows all along, and takes the screen when you step away. Every effect has a reduced-motion version, switched live from Settings.</p>
+      <div class="walls">
+        <div><picture><source media="(prefers-reduced-motion: reduce)" srcset="img/wallpaper-attractor-still.webp"><img src="img/wallpaper-attractor.webp" width="480" height="300" loading="lazy" alt="Attractor: the logo unravelling into a strange attractor drawn in dots"></picture><b>Attractor</b><span>The logo unravels into a strange attractor, then winds back into letters.</span></div>
+        <div><picture><source media="(prefers-reduced-motion: reduce)" srcset="img/wallpaper-galaxies-still.webp"><img src="img/wallpaper-galaxies.webp" width="480" height="300" loading="lazy" alt="Galaxies: two spiral galaxies drawn in dots, circling each other"></picture><b>Galaxies</b><span>Two galaxies collide, then the collision runs backwards.</span></div>
+        <div><picture><source media="(prefers-reduced-motion: reduce)" srcset="img/wallpaper-physarum-still.webp"><img src="img/wallpaper-physarum.webp" width="480" height="300" loading="lazy" alt="Physarum: a slime mould spreading out of the logo in amber veins"></picture><b>Physarum</b><span>A slime mould creeps out over the screen in amber veins.</span></div>
+        <div><picture><source media="(prefers-reduced-motion: reduce)" srcset="img/wallpaper-life-still.webp"><img src="img/wallpaper-life.webp" width="480" height="300" loading="lazy" alt="Life: glowing Game of Life cells swirling round the logo"></picture><b>Life</b><span>Conway's Game of Life, glowing and swirling to a beat.</span></div>
+        <div><picture><source media="(prefers-reduced-motion: reduce)" srcset="img/wallpaper-coral-still.webp"><img src="img/wallpaper-coral.webp" width="480" height="300" loading="lazy" alt="Coral: a chemical reaction growing in stripes and spots from the letters"></picture><b>Coral</b><span>The letters seed a chemical reaction that grows in stripes and spots.</span></div>
+        <div><picture><source media="(prefers-reduced-motion: reduce)" srcset="img/wallpaper-warp-still.webp"><img src="img/wallpaper-warp.webp" width="480" height="300" loading="lazy" alt="Warp: a tunnel of streaks with the logo rising from its vanishing point"></picture><b>Warp</b><span>A tunnel of streaks, the logo rising from its vanishing point.</span></div>
+      </div>
+    </div>
+
+    <div class="sub-sec">
+      <span class="kicker">Make it yours</span>
+      <div class="feature flip">
+        <img class="shot" src="img/plugins-still.webp" width="630" height="880" loading="lazy" alt="The plugin panel under the clock with four cards: a focus timer, the weather, the computer's processor, memory and disk, and backups." style="max-width:380px">
+        <div class="stack">
+          <h2>Plugins beside the clock.</h2>
+          <p>Little apps, your own or other people's, each add a card to a panel that drops from the bar. Anything that prints a line of JSON can be one.</p>
+          <p><strong>Nothing runs until you've looked.</strong> Each plugin runs in a sandbox that reaches only what it lists, and Settings says in plain words what that is before you turn it on. If its files change later, it switches itself off until you've looked again.</p>
+          <p><strong>Your colours, everywhere.</strong> Pick one of ten sets of three colours that go together, and the whole desktop follows, Settings included.</p>
+        </div>
+      </div>
+      <div class="install">
+        <h3>Get Slipstream</h3>
+        <p>One command downloads the newest release, checks its published checksum and signature, and says what it will do before it writes anything. Then log out and choose Slipstream on the login screen. Add <code>-- --try</code> to open it in a window first, installing nothing.</p>
+        <div class="cmd"><pre id="cmd-ss">sh -c "$(curl -fsSL https://raw.githubusercontent.com/peterwalker78/slipstream-desktop/main/install.sh)"</pre><button type="button" data-copy="cmd-ss">Copy</button></div>
+        <p class="cap">x86_64 Linux with Debian 13's libraries or newer. <a href="https://github.com/peterwalker78/slipstream-desktop">github.com/peterwalker78/slipstream-desktop</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Glimmerwood -->
+<section class="band paper gw" id="glimmerwood" aria-labelledby="gw-h" style="--c:var(--gw-deep)">
+  <div class="wrap">
+    <div class="prod-head">
+      <div>
+        <span class="kicker" style="color:var(--gw-deep)">The web browser</span>
+        <img class="icon" src="img/gw-icon.svg" width="84" height="84" alt="The wisp, a small glowing flame with a friendly face, resting on moss">
+        <h2 id="gw-h">Glimmerwood</h2>
+        <p class="tag">The web browser that's on your side. Probably the only browser that's happiest when you're not using it.</p>
+        <p>A small, glowing flame with a face lives in the corner of the toolbar. It's yours, and it reflects the quality of your time online the way the sky reflects the weather.</p>
+        <p>Somewhere that restores you and it brightens and lets off little motes of light. Sink into an endless feed and it clouds over, grows tired and drifts to the edge of its nook, as if it's ready to go outside and hoping you'll come too. <strong>It never scolds you.</strong></p>
+      </div>
+      <img class="shot" src="img/browsing.webp" width="1400" height="934" loading="lazy" alt="Glimmerwood showing a Wikipedia article. In the corner of the toolbar the wisp is bright and smiling, with its caption open.">
+    </div>
+    <div class="wisps">
+      <div><img src="img/wisp-bright.webp" width="300" height="109" loading="lazy" alt="The wisp, bright: open eyes and a smile"><b>Bright</b><span>rested and ready</span></div>
+      <div><img src="img/wisp-happy.webp" width="300" height="109" loading="lazy" alt="The wisp, happy: eyes closed in a smile"><b>Happy</b><span>somewhere that restores you</span></div>
+      <div><img src="img/wisp-clouded.webp" width="300" height="109" loading="lazy" alt="The wisp, clouded: pale blue-grey and wary"><b>Clouded</b><span>a long scroll is weighing on it</span></div>
+      <div><img src="img/wisp-sleepy.webp" width="300" height="109" loading="lazy" alt="The wisp, sleepy: a dim ember on dry moss"><b>Sleepy</b><span>time for a breather</span></div>
+      <div><img src="img/wisp-dozing.webp" width="300" height="109" loading="lazy" alt="The wisp, dozing while you're away"><b>Dozing</b><span>you're away, and it's resting too</span></div>
+      <div><img src="img/wisp-night.webp" width="300" height="109" loading="lazy" alt="The wisp winding down: a warm glow late at night"><b>Winding down</b><span>late at night, with you</span></div>
+    </div>
+
+    <div class="grid-2 sub-sec" style="margin-top:72px">
+      <div class="stack">
+        <img class="shot" src="img/home.webp" width="1400" height="934" loading="lazy" alt="Glimmerwood's Home page: a garden under an evening sky, a greeting, and cards for good places such as Project Gutenberg and Wikipedia.">
+        <h3>A garden that grows on good days.</h3>
+        <p>Every new tab opens on a calm page made on your computer. A quiet day brings moss, a day of learning ferns, a calm night fireflies. <strong>Nothing ever wilts, and missing a day costs nothing.</strong> Instead of the sites you visit most, it suggests somewhere worth going: over 300 researched corners of the web, from live nature cams and free books to museums and gentle puzzles.</p>
+      </div>
+      <div class="stack">
+        <img class="shot" src="img/days.webp" width="1230" height="975" loading="lazy" alt="The wisp's days: today from bright to busy, seven day columns split into restoring, everyday and wearing time, and the sites that moved it this week.">
+        <h3>See your days, not a scoreboard.</h3>
+        <p>Click the wisp for how today has felt, the shape of your week, and which places restored you or wore you down. No minutes, scores or percentages anywhere: just the pattern, and the kind of mirror that makes the next choice easier. <i>Oh, Thursday evenings are always like that.</i></p>
+      </div>
+    </div>
+
+    <div class="grid-2" style="margin-top:56px">
+      <div>
+        <h3 style="margin-bottom:16px">Why a little light works better than a lock.</h3>
+        <ul class="dots" style="--c:var(--gw)">
+          <li><strong>Noticing, not nagging.</strong> The wisp does the noticing, so the choice stays yours.</li>
+          <li><strong>You're always in charge.</strong> No page is ever blocked and nothing pops up to warn you.</li>
+          <li><strong>Time away counts most.</strong> The best thing for your wisp isn't a “good” website; it's closing the laptop.</li>
+          <li><strong>Your evenings matter.</strong> After eleven, the wisp winds down with you.</li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="margin-bottom:16px">Nothing leaves your computer.</h3>
+        <ul class="dots" style="--c:var(--gw)">
+          <li><strong>No accounts, telemetry, update pings or cloud.</strong> The only traffic is the pages you visit.</li>
+          <li><strong>The wisp never sees an address,</strong> only which list a place was on.</li>
+          <li><strong>History keeps a week,</strong> on your computer, then it's deleted.</li>
+          <li><strong>Trackers are blocked</strong> before they can load.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="install">
+      <h3>Get Glimmerwood</h3>
+      <p>Install the Flatpak, make it your default browser, and use the web as you normally would. There's nothing to set up.</p>
+      <div class="cmd"><pre id="cmd-gw">curl -LO https://github.com/peterwalker78/glimmerwood/releases/latest/download/glimmerwood-x86_64.flatpak
+flatpak install --user glimmerwood-x86_64.flatpak</pre><button type="button" data-copy="cmd-gw">Copy</button></div>
+      <p class="cap">x86_64 Linux, with Flathub for the GNOME runtime. On a phone: <a href="https://peterwalker78.github.io/glimmerwood/">the garden on the web</a>. <a href="https://github.com/peterwalker78/glimmerwood">github.com/peterwalker78/glimmerwood</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- Westering -->
+<section class="dark" id="westering" aria-labelledby="ws-h">
+  <div class="ws-hero">
+    <img src="img/ws-hello.webp" width="1280" height="800" loading="lazy" alt="Westering's night sky in fine dots. The wisp, a small glowing flame, says: Hello. I'm the wisp. This is the real sky over you tonight, just as it is outside.">
+    <div class="wrap">
+      <img class="icon" src="img/ws-icon.svg" width="56" height="56" alt="">
+      <span class="kicker" style="color:var(--ws-blue)">The end of the day</span>
+      <h2 id="ws-h">Westering</h2>
+      <p class="def">Going west, as the Sun and stars do when they go down.</p>
+    </div>
+  </div>
+  <div class="wrap band" style="padding-top:36px">
+    <div class="grid-2">
+      <p class="lead" style="font-family:var(--display);font-style:italic;font-size:clamp(24px,2.8vw,32px);line-height:1.25">Tonight's real sky, and then the real sky outside.</p>
+      <div>
+        <p>A small stargazing game that is designed to let you go. A few quiet minutes at the end of the day to come back to what matters: the people who are there for you, something to look forward to, and setting down what's weighing on you so it's lighter in the morning.</p>
+        <p>It draws the sky over you right now, in fine dots: the real stars, the Moon at its real phase, the planets that are really up. The wisp from Glimmerwood is out for the night, on a tuft of moss on the horizon.</p>
+      </div>
+    </div>
+
+    <div class="sub-sec" style="--c:var(--ws-blue)">
+      <span class="kicker">Every evening</span>
+      <h2>Four parts, then goodnight.</h2>
+      <div class="parts">
+        <div><div class="n">i</div><h3>Set it down</h3><p>Anything heavy tonight? Write it in a few words and it becomes a warm star hung low in the west. Only you will ever see it.</p></div>
+        <div><div class="n">ii</div><h3>Explore</h3><p>Tonight's list with the wisp: planets, clusters and galaxies to find, a story told a card at a time, and now and then a small question about your life.</p></div>
+        <div><div class="n">iii</div><h3>Look up</h3><p>The sky on your own. Zoom in and a real photograph from Hubble, Webb or a ground telescope takes over from the dots.</p></div>
+        <div><div class="n">iv</div><h3>Wind down</h3><p>A few slow breaths with the wisp, in for four and out for six. The screen dims, and you watch what you set down sink behind the horizon.</p></div>
+      </div>
+      <div class="grid-2" style="margin-top:44px">
+        <figure style="margin:0"><img class="shot" src="img/ws-setdown.webp" width="1280" height="800" loading="lazy" alt="The wisp beside a box asking: Is anything weighing on you tonight? Write it in a few words."><figcaption class="cap">“Is anything weighing on you tonight?” A worry written down is easier to put down.</figcaption></figure>
+        <figure style="margin:0"><img class="shot" src="img/ws-day.webp" width="1280" height="800" loading="lazy" alt="Westering by day: a dotted field under an autumn tree, a standing stone casting this minute's shadow, and the wisp."><figcaption class="cap">By day there are no stars, so it looks down: the Sun where it really is, a standing stone casting this minute's shadow, and a nudge to step outside.</figcaption></figure>
+      </div>
+    </div>
+
+    <div class="sub-sec" style="--c:var(--ws-blue)">
+      <span class="kicker">Built to let you go</span>
+      <div class="feature">
+        <div>
+          <h2>It wants you to leave.</h2>
+          <p class="lead" style="margin:18px 0 22px">Most apps are built to keep you. This one is built to let you go, and says so, so there's no trick in it.</p>
+          <ul class="dots" style="--c:var(--ws)">
+            <li><strong>The sky is finite.</strong> Only so many things to find each night; then the sky is done until it has turned.</li>
+            <li><strong>It slows as you play.</strong> The twinkle, the drift and the pace ease down towards the speed of slow breathing. Nothing announces it.</li>
+            <li><strong>It offers the way out.</strong> About a quarter of an hour in, once, a line says how to wind down. It never says how long you've been here.</li>
+            <li><strong>It dims before the end,</strong> a little at a time, because bright light keeps a mind awake.</li>
+            <li><strong>Nothing to come back for.</strong> No streaks, scores, badges or notifications. Missing a night costs nothing.</li>
+            <li><strong>No network access at all.</strong> What you write stays on your computer, by construction.</li>
+          </ul>
+          <p class="lastline">“If it's clear: Saturn is up in the south-east, a steady light that doesn't twinkle. Give your eyes twenty minutes.”<span class="src" style="font-style:normal">The last line. Then the window closes itself.</span></p>
+        </div>
+        <div class="stack">
+          <img class="shot" src="img/logbook.webp" width="1060" height="730" loading="lazy" alt="A night's page in the logbook: a round chart of that evening's sky with the finds numbered, and the worries set down.">
+          <p><strong>A logbook of plain files.</strong> A page for each night with a small chart of that evening's sky. Any worry can have a plan charted for it, only if you ask: a wish, the best of it, what gets in the way, and an if-then plan.</p>
+          <img class="shot" src="img/moon.webp" width="1280" height="800" loading="lazy" alt="The Moon close up in dots, with a card: first quarter, 403,000 km away tonight.">
+        </div>
+      </div>
+      <div class="install">
+        <h3>Get Westering</h3>
+        <p>Open it at the end of the day. The first night, the wisp shows you around.</p>
+        <div class="cmd"><pre id="cmd-ws">curl -LO https://github.com/peterwalker78/westering/releases/latest/download/westering-x86_64.flatpak
+flatpak install --user westering-x86_64.flatpak</pre><button type="button" data-copy="cmd-ws">Copy</button></div>
+        <p class="cap">x86_64 Linux, with Flathub for the GNOME runtime. <a href="https://github.com/peterwalker78/westering">github.com/peterwalker78/westering</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Who made it -->
+<section class="band dark madeby" id="made-by" aria-labelledby="made-h" style="border-top:1px solid var(--rule)">
+  <div class="wrap">
+    <span class="kicker">Who made it</span>
+    <h2 id="made-h">Written by AI.<br>Directed by a person.</h2>
+    <div class="grid-2" style="margin-top:28px">
+      <p class="lead">All of the code in Slipstream, Glimmerwood and Westering is written by AI: Claude, made by Anthropic. We say so plainly, because it matters how software you trust was made.</p>
+      <div>
+        <p>What the AI can't do is decide what the apps are for, judge how they feel, notice where they fall short, or know when they really work. That came from <strong>Peter Walker</strong>, who set the vision, made the calls, and has used all three every day since the first build, catching what no test would.</p>
+        <p>None of the apps has AI features, and none ever will.</p>
+      </div>
+    </div>
+    <div class="figs">
+      <section aria-labelledby="fig-vision" style="--c:var(--ws)">
+        <h3 id="fig-vision">The vision</h3>
+        <dl>
+          <div><dt>615+</dt><dd><strong>Prompts written by Peter</strong>Across 61 or more working sessions; only about twenty were a bare “continue” or “yes”.</dd></div>
+          <div><dt>270+</dt><dd><strong>Design decisions</strong>Approvals, rejections and choices between options, from the logo to what each app must never do.</dd></div>
+          <div><dt>75+</dt><dd><strong>Ideas that started with him</strong>Features and principles that came from Peter, not the AI: concentration first, the wisp, a game that wants you to leave.</dd></div>
+        </dl>
+      </section>
+      <section aria-labelledby="fig-correct" style="--c:var(--ss)">
+        <h3 id="fig-correct">Technical correctness</h3>
+        <dl>
+          <div><dt>95+</dt><dd><strong>Bugs found by living with the apps</strong>Faults that passed every automated test and only showed up in daily use on real hardware.</dd></div>
+          <div><dt>6+</dt><dd><strong>False “it works” caught</strong>Times the AI reported something fixed or finished and it wasn't. Peter accepts “it works” only after watching it work.</dd></div>
+          <div><dt>5</dt><dd><strong>Bugs reported upstream</strong>Problems traced to the software underneath, such as the WebKitGTK web engine and the Linux kernel. One is already fixed.</dd></div>
+        </dl>
+      </section>
+    </div>
+    <p class="method">Counted from the AI's own session transcripts for all three apps and the agent-notify plugin, 14 September to 23 October 2026. These are minimums: the transcripts miss the first week of building, and planning done in chat. Between them, the three repositories hold 790 commits on their main branches.</p>
+    <div class="grid-3 moments-ai">
+      <article><h3>The close effect</h3><p>He picked a design from the AI's mockups; the first build looked like the window being chopped into strips. About eight rounds of his direction later (close downwards, more transparency, eat the window while pushing it), it was right.</p></article>
+      <article><h3>The idea for Westering</h3><p>The AI's first two answers to “what about down-time?” missed what he meant. He steered it to a separate app that quietly helps you switch off, then set what was in it: reflective questions, people and plans, no AI.</p></article>
+      <article><h3>The agent monitor</h3><p>Over one evening the AI said a feature worked again and again. Each time he watched a real run, it didn't. It took a redesign he pushed for, not another patch.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- Science -->
+<section class="band paper" id="why-it-works" aria-labelledby="sci-h">
+  <div class="wrap sci-grid">
+    <div>
+      <span class="kicker">Why it works</span>
+      <h2 id="sci-h">Built on what we know about people.</h2>
+      <p class="lead" style="margin-top:20px">None of this is new science. It's well-studied psychology, applied by software that has nothing to gain from your time.</p>
+      <p style="margin-top:14px">Where the evidence is modest, we say so: nobody has shown that stargazing itself improves sleep. The claim is only that a little dark and a big sky beat another half hour of screen.</p>
+    </div>
+    <div style="overflow-x:auto;min-width:0">
+      <table class="sci-table">
+        <thead><tr><th scope="col">What research found</th><th scope="col">What we built</th><th scope="col">Where</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Interruptions cost more than time.</strong> People make up for them by rushing, at the price of stress and frustration.<span class="src"><a href="https://doi.org/10.1145/1357054.1357072">Mark, Gudith &amp; Klocke, 2008</a></span></td><td>Notifications wait for a pause in your typing, then arrive as one card.</td><td class="app-name" style="color:var(--ss-deep)">Slipstream</td></tr>
+          <tr><td><strong>Calm technology</strong> informs at the edge of attention instead of demanding the centre of it.<span class="src">Weiser &amp; Brown, 1995</span></td><td>Streams show what an app is doing from the corner of your eye; the wisp sits quietly in a corner.</td><td class="app-name" style="color:var(--ss-deep)">Both</td></tr>
+          <tr><td><strong>Flow,</strong> deep absorption in a task that stretches you, is among the most satisfying states people report.<span class="src">Csikszentmihalyi, 1990</span></td><td>A keyboard-first desktop where every window is one key away, and nothing pulls you out.</td><td class="app-name" style="color:var(--ss-deep)">Slipstream</td></tr>
+          <tr><td><strong>Noticing changes behaviour.</strong> Students who only kept track of their social media use came out less anxious.<span class="src"><a href="https://doi.org/10.1521/jscp.2018.37.10.751">Hunt and others, 2018</a></span></td><td>The wisp notices for you, so you see the pattern and the choice stays yours.</td><td class="app-name" style="color:var(--gw-deep)">Glimmerwood</td></tr>
+          <tr><td><strong>Shame makes people hide</strong> from a problem; guilt about a specific act makes them repair it.<span class="src">Tangney &amp; Dearing, 2002</span></td><td>Nothing scolds. At its heaviest the wisp looks sleepy, never sad, and nothing is ever blocked.</td><td class="app-name" style="color:var(--gw-deep)">Glimmerwood</td></tr>
+          <tr><td><strong>Bright screens in the evening</strong> delay the body's sleep hormone and push sleep later.<span class="src"><a href="https://doi.org/10.1073/pnas.1418490112">Chang and others, 2015</a></span></td><td>Night light follows the real sun; the wisp winds down after eleven; Westering dims before the end.</td><td class="app-name" style="color:var(--ws-deep)">All three</td></tr>
+          <tr><td><strong>Gratitude lifts mood.</strong> People who wrote weekly about what they were grateful for felt better about their lives.<span class="src"><a href="https://doi.org/10.1037/0022-3514.84.2.377">Emmons &amp; McCullough, 2003</a></span></td><td>Small questions about the people who are there for you, without ever naming gratitude.</td><td class="app-name" style="color:var(--ws-deep)">Westering</td></tr>
+          <tr><td><strong>If-then plans</strong> markedly raise the odds of following through on a goal.<span class="src"><a href="https://doi.org/10.1016/S0065-2601(06)38002-1">Gollwitzer &amp; Sheeran, 2006</a></span></td><td>A plan charted for a worry: a wish, the best of it, what's in the way, and what you'll do if it happens.</td><td class="app-name" style="color:var(--ws-deep)">Westering</td></tr>
+          <tr><td><strong>Slow breathing,</strong> under ten breaths a minute, goes with calm and less anxiety.<span class="src"><a href="https://doi.org/10.3389/fnhum.2018.00353">Zaccaro and others, 2018</a></span></td><td>The wisp breathes with you, in for four and out for six, and its own breath slows through the evening.</td><td class="app-name" style="color:var(--ws-deep)">Westering</td></tr>
+          <tr><td><strong>Awe</strong>, at something vast, goes with less stress and less dwelling on oneself.<span class="src"><a href="https://doi.org/10.1037/pspi0000018">Piff and others, 2015</a>; <a href="https://doi.org/10.1037/emo0000442">Anderson, Monroy &amp; Keltner, 2018</a></span></td><td>The last line names something real to look at in tonight's sky, outside.</td><td class="app-name" style="color:var(--ws-deep)">Westering</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- Technical -->
+<section class="band dark" id="under-the-hood" aria-labelledby="tech-h">
+  <div class="wrap">
+    <div class="grid-2" style="align-items:end">
+      <div><span class="kicker">For the technically curious</span><h2 id="tech-h">Under the hood.</h2></div>
+      <p>Three native Linux apps written in Rust, each its own open-source project, each standing on its own. They share an aim and a look, and no code dependencies in either direction. Every change is built and tested in CI.</p>
+    </div>
+    <div class="grid-3 cards">
+      <div class="card" style="--c:var(--ss)">
+        <h3>Slipstream</h3>
+        <div class="stackline">Rust · Smithay · Wayland · GTK 4</div>
+        <dl>
+          <dt>What it is</dt><dd>A whole desktop: its own Wayland compositor, bar, notifications, lock screen, app explorer and Settings. X11 apps run through XWayland; Flatpaks and games work.</dd>
+          <dt>Install</dt><dd>One portable download, checked against its published checksum and signature. It says what it will do before writing anything, and <code>--uninstall</code> removes exactly what it wrote.</dd>
+          <dt>Tested on</dt><dd>Every release is installed and started on Debian, Ubuntu, Fedora, Arch and openSUSE.</dd>
+          <dt>Extending</dt><dd>Plugins are any program that prints a line of JSON, each in a sandbox that reaches only what it lists. Settings are plain text.</dd>
+        </dl>
+      </div>
+      <div class="card" style="--c:var(--gw)">
+        <h3>Glimmerwood</h3>
+        <div class="stackline">Rust · GTK 4 · WebKitGTK 6 · Flatpak</div>
+        <dl>
+          <dt>Engine</dt><dd>WebKitGTK, from the same engine family as Safari, in a lean shell with a single toolbar.</dd>
+          <dt>Privacy</dt><dd>Trackers blocked before they load; every site asked for a secure connection first. The wisp's records hold a list name, never an address, title or anything typed.</dd>
+          <dt>A test for kindness</dt><dd>A test fails the build if the browser's own interface ever grows a pop-up dialog or anything red.</dd>
+          <dt>Lists you can read</dt><dd>What counts as restoring or wearing is plain text you can edit, and anyone can propose a change.</dd>
+        </dl>
+      </div>
+      <div class="card" style="--c:var(--ws-blue)">
+        <h3>Westering</h3>
+        <div class="stackline">Rust · GTK 4 · Flatpak with no network permission</div>
+        <dl>
+          <dt>The sky</dt><dd>Every star to magnitude 6.5 from the Yale Bright Star Catalogue. Tests check the planets against NASA JPL's Horizons to within 0.2°, and the Moon to within 0.1°.</dd>
+          <dt>No location service</dt><dd>Where you are comes from your time zone; Settings takes a latitude and longitude if you want it closer.</dd>
+          <dt>A test for calm</dt><dd>A test checks that the pace only ever eases down and the light never jumps.</dd>
+          <dt>Sources</dt><dd>Over 300 photographs from NASA, ESA/Hubble, ESA/Webb and others, each credited on screen; every music track is CC0.</dd>
+        </dl>
+      </div>
+    </div>
+    <div class="edges grid-2">
+      <p><strong>Not yet:</strong> ARM machines, Ubuntu 24.04 and the distributions built on it, and Slipstream with NVIDIA's driver, which hasn't been tried. Glimmerwood is Linux only.</p>
+      <p><strong>Free software:</strong> all three are GPL-3.0-or-later, for x86_64 Linux, on GitHub under <a href="https://github.com/peterwalker78">peterwalker78</a>. Issues and pull requests are welcome.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Promises and why now -->
+<section class="band paper" id="promises" aria-labelledby="prom-h">
+  <div class="wrap grid-2">
+    <div>
+      <span class="kicker">What all three promise</span>
+      <h2 id="prom-h">Trust is the whole product.</h2>
+      <p style="margin-top:18px">Software that notices how your time feels has to be trustworthy, so these aren't settings. They're how the apps are built.</p>
+      <div class="promises">
+        <div><b>Nothing leaves your computer.</b><p>No telemetry, accounts or cloud. Westering can't even reach the network.</p></div>
+        <div><b>Nothing is counted against you.</b><p>No streaks, scores or badges. Missing a day costs you nothing.</p></div>
+        <div><b>Kindness over guilt.</b><p>Nothing scolds or nags, no page is blocked, and every choice stays yours.</p></div>
+        <div><b>No AI features, ever.</b><p>The code is written by AI; the apps contain none. Software that does what it says.</p></div>
+        <div><b>Built to be put down.</b><p>Nothing is designed to keep you looking for longer than you meant to.</p></div>
+        <div><b>Free and open.</b><p>Read every line, build it yourself, and keep it for ever.</p></div>
+      </div>
+    </div>
+    <div>
+      <span class="kicker">Why now</span>
+      <h2>The tide is turning.</h2>
+      <div class="timeline">
+        <div><span class="d">Oct 2025</span><p>Windows 10 support ends, leaving millions of working computers looking for somewhere to go.</p></div>
+        <div><span class="d">Dec 2025</span><p>Australia's minimum age of 16 for social media accounts comes into force.</p></div>
+        <div><span class="d">Feb 2026</span><p>The European Commission's <a href="https://digital-strategy.ec.europa.eu/en/news/commission-preliminarily-finds-tiktoks-addictive-design-breach-digital-services-act">preliminary findings</a> say TikTok's addictive design breaches the Digital Services Act.</p></div>
+        <div><span class="d">Mar 2026</span><p>Linux passes 5% of Steam's hardware survey for the first time.</p></div>
+      </div>
+      <p class="so">Regulators are naming addictive design, and more people than ever are arriving on Linux. They deserve software that's on their side.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Questions -->
+<section class="band dark" id="questions" aria-labelledby="faq-h">
+  <div class="wrap">
+    <span class="kicker">Questions</span>
+    <h2 id="faq-h">Plain answers.</h2>
+    <dl class="faq">
+      <div><dt>What is Human Again?</dt><dd>The shared aim of three free Linux apps: Slipstream, a keyboard-first desktop; Glimmerwood, a quiet web browser; and Westering, a night-sky game for winding down. Each is built to give people their attention back rather than to hold on to it.</dd></div>
+      <div><dt>Are they free?</dt><dd>Yes. All three are free and open source under the GNU GPL, version 3 or later, with no accounts, adverts or paid tiers.</dd></div>
+      <div><dt>Was the code written by AI?</dt><dd>Yes, all of it, by Claude. The vision, the design decisions and the testing come from Peter Walker, who uses all three apps every day. None of the apps has AI features, and none ever will.</dd></div>
+      <div><dt>Do they collect any data?</dt><dd>No. There is no telemetry and no account. Glimmerwood's only network traffic is the pages you visit, and Westering has no network permission at all.</dd></div>
+      <div><dt>Which computers do they run on?</dt><dd>x86_64 Linux. Slipstream needs Debian 13's libraries or newer and is tested on Debian, Ubuntu, Fedora, Arch and openSUSE. Glimmerwood and Westering are Flatpaks for any Linux desktop. There are no Windows or macOS versions.</dd></div>
+      <div><dt>Can I use one without the others?</dt><dd>Yes. Each is its own project. Slipstream's installer offers the other two, but Glimmerwood and Westering run on any Linux desktop.</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- Join -->
+<section class="band dark" id="join" aria-labelledby="join-h" style="border-top:1px solid var(--rule)">
+  <div class="wrap">
+    <span class="kicker">Be part of it</span>
+    <h2 id="join-h">Help us make people human again.</h2>
+    <p class="lead measure" style="margin-top:18px">All three apps exist, run every day, and are free for anyone to use. What comes next is about reaching the people they're for.</p>
+    <div class="grid-3 ways">
+      <div class="way"><div class="n">1</div><h3>Use them.</h3><p>Try Slipstream in a window on the desktop you have now, installing nothing, by adding <code>-- --try</code> to the install command.</p></div>
+      <div class="way"><div class="n">2</div><h3>Build with us.</h3><p>Write a plugin, propose a site for the right list, test on hardware we haven't reached, or open an issue. Every report makes the apps better for everyone.</p></div>
+      <div class="way"><div class="n">3</div><h3>Back the work.</h3><p>If you believe technology should be judged by how well people live when they put it down, we'd like to talk about taking this further, together.</p></div>
+    </div>
+    <div class="next grid-2">
+      <div>
+        <h3 style="margin-bottom:12px">Where it goes next</h3>
+        <ul class="dots">
+          <li><strong>Slipstream 1.0,</strong> then ARM machines, Ubuntu 24.04 and its family, and packages in distributions' own repositories.</li>
+          <li><strong>Glimmerwood:</strong> a short daily read in the garden, gentle whispers at natural stopping points, an optional pause at the door of sites you choose, and sleeping tabs.</li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="margin-bottom:12px">Get in touch</h3>
+        <p>Open an issue or a discussion on any of the three repositories on GitHub, under <a href="https://github.com/peterwalker78">peterwalker78</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="foot">
+    <img src="img/art-horizon.webp" width="2000" height="1414" loading="lazy" alt="Tonight's sky drawn in fine dots over a mossy horizon, with one warm star low in the west.">
+    <div class="over">
+      <div class="wrap">
+        <h2>Close the laptop.<br><i>Go and look up.</i></h2>
+        <p>Software that measures its success by how well you live when you're not using it.</p>
+      </div>
+    </div>
+  </div>
+  <div class="fine">
+    <div class="wrap">
+      <div class="row">
+        <div><b>Slipstream</b><a href="https://github.com/peterwalker78/slipstream-desktop">github.com/peterwalker78/slipstream-desktop</a></div>
+        <div><b>Glimmerwood</b><a href="https://github.com/peterwalker78/glimmerwood">github.com/peterwalker78/glimmerwood</a></div>
+        <div><b>Westering</b><a href="https://github.com/peterwalker78/westering">github.com/peterwalker78/westering</a></div>
+      </div>
+      <p class="small">All code written by AI (Claude, by Anthropic), directed by Peter Walker. Every picture of the apps comes from the apps themselves; the dotted illustrations are drawn for this page in the apps' own style. This page sets no cookies and loads nothing from anywhere else. A plain-text summary is at <a href="llms.txt">llms.txt</a>.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll("[data-copy]").forEach(function (b) {
+  b.addEventListener("click", function () {
+    var pre = document.getElementById(b.getAttribute("data-copy"));
+    var text = pre.textContent;
+    function done(ok) { b.textContent = ok ? "Copied" : "Selected"; setTimeout(function () { b.textContent = "Copy"; }, 1600); }
+    function select() { var r = document.createRange(); r.selectNodeContents(pre); var s = getSelection(); s.removeAllRanges(); s.addRange(r); done(false); }
+    try { navigator.clipboard.writeText(text).then(function () { done(true); }, select); } catch (e) { select(); }
+  });
+});
+</script>
+</body>
+</html>
