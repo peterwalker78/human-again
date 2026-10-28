@@ -14,15 +14,15 @@ body:
     attributes:
       label: Which promise
       options:
-        - On the person's side
+        - On people's side
         - Honest
-        - Free and open
-        - Nothing leaves the computer unless the person asks
+        - Open, and paid for once at most
+        - Nothing leaves the computer unless people ask
         - No AI features
         - Nothing is counted against anyone
         - Kindness over guilt
         - Built to be put down
-        - Read kindly, never as an excuse
+        - When in doubt, people come first
     validations:
       required: true
   - type: textarea
