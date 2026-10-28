@@ -1,0 +1,34 @@
+name: Report a broken promise
+description: An ally's app, or one of ours, breaks the code for allies.
+title: "Broken promise: "
+labels: ["broken promise"]
+body:
+  - type: input
+    id: app
+    attributes:
+      label: App and version
+    validations:
+      required: true
+  - type: dropdown
+    id: promise
+    attributes:
+      label: Which promise
+      options:
+        - On the person's side
+        - Honest
+        - Free and open
+        - Nothing leaves the computer unless the person asks
+        - No AI features
+        - Nothing is counted against anyone
+        - Kindness over guilt
+        - Built to be put down
+        - Read kindly, never as an excuse
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happens
+      description: What you saw, and how we can see it too.
+    validations:
+      required: true

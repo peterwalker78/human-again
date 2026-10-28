@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Code for allies · Human Again</title>
+<meta name="description" content="Human Again is open to other builders who make software with AI and want it to be on people's side. Allies keep nine promises, checked in the open, and get one strike.">
+<meta name="author" content="Peter Walker">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#10141c">
+<link rel="canonical" href="https://peterwalker78.github.io/human-again/allies.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%2310141c'/%3E%3Crect x='6' y='6' width='4' height='4' fill='%23ffb86b'/%3E%3Crect x='2' y='12' width='12' height='2' fill='%236f9a4f'/%3E%3C/svg%3E">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Human Again">
+<meta property="og:title" content="Code for allies: same promises, no exceptions">
+<meta property="og:description" content="Open to builders who make software with AI and want it on people's side. Nine promises, checked in the open, one strike.">
+<meta property="og:url" content="https://peterwalker78.github.io/human-again/allies.html">
+<meta property="og:image" content="https://peterwalker78.github.io/human-again/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Human again: a strange attractor drawn in fine dots beside the title.">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Code for allies: same promises, no exceptions">
+<meta name="twitter:description" content="Open to builders who make software with AI and want it on people's side. Nine promises, checked in the open, one strike.">
+<meta name="twitter:image" content="https://peterwalker78.github.io/human-again/img/og.png">
+<link rel="preload" href="fonts/Fraunces-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face { font-family: "Fraunces"; src: url(fonts/Fraunces-normal.woff2) format("woff2"); font-weight: 300 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Fraunces"; src: url(fonts/Fraunces-italic.woff2) format("woff2"); font-weight: 300 500; font-style: italic; font-display: swap; }
+@font-face { font-family: "Atkinson"; src: url(fonts/AtkinsonHyperlegible-Regular.ttf) format("truetype"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Atkinson"; src: url(fonts/AtkinsonHyperlegible-Bold.ttf) format("truetype"); font-weight: 700; font-display: swap; }
+@font-face { font-family: "JBMono"; src: url(fonts/JetBrainsMono-Regular.ttf) format("truetype"); font-weight: 400; font-display: swap; }
+
+/* The same night sky and paper bands as the main page, cut down to what this page uses. */
+:root {
+  color-scheme: dark;
+  --night: #10141c; --night-2: #171c27; --rule: #2a3240;
+  --ink: #ede8dc; --soft: #bab6ac; --mute: #8a92a1;
+  --paper: #f3eee3; --paper-rule: #d6cdbb;
+  --p-ink: #1b1e25; --p-soft: #474a52; --p-mute: #7a7565;
+  --ws: #ffb86b;
+  --display: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --body: "Atkinson", "Segoe UI", system-ui, sans-serif;
+  --mono: "JBMono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --gut-l: max(clamp(16px, 4vw, 44px), env(safe-area-inset-left, 0px));
+  --gut-r: max(clamp(16px, 4vw, 44px), env(safe-area-inset-right, 0px));
+}
+html { scroll-behavior: smooth; scroll-padding-top: calc(64px + env(safe-area-inset-top, 0px)); }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body { margin: 0; background: var(--night); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+a:focus-visible { outline: 2px solid var(--ws); outline-offset: 3px; border-radius: 3px; }
+h1, h2, h3 { font-family: var(--display); font-weight: 400; letter-spacing: -.012em; text-wrap: balance; margin: 0; }
+h2 { font-size: clamp(32px, 5vw, 52px); line-height: 1.05; }
+h3 { font-size: clamp(21px, 2.4vw, 25px); line-height: 1.2; }
+p { margin: 0; }
+p + p { margin-top: .8em; }
+.wrap { max-width: 1160px; margin-inline: auto; padding-left: var(--gut-l); padding-right: var(--gut-r); }
+.band { padding-block: clamp(64px, 9vw, 120px); }
+.paper { background: var(--paper); color: var(--p-ink); }
+.dark { background: var(--night); color: var(--ink); }
+.dark p, .dark li { color: var(--soft); }
+.paper p { color: var(--p-soft); }
+.kicker { font-family: var(--mono); font-size: 12px; letter-spacing: .16em; text-transform: uppercase; display: block; margin-bottom: 16px; }
+.dark .kicker { color: var(--mute); }
+.paper .kicker { color: var(--p-mute); }
+.lead { font-size: clamp(19px, 2vw, 22px); line-height: 1.45; }
+.dark .lead { color: var(--ink); }
+.measure { max-width: 64ch; }
+ul.dots { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; }
+ul.dots li { position: relative; padding-left: 22px; }
+ul.dots li::before { content: ""; position: absolute; left: 0; top: .62em; width: 7px; height: 7px; background: var(--ws); }
+.grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(28px, 4vw, 56px); }
+.grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(20px, 3vw, 36px); }
+@media (max-width: 860px) { .grid-2, .grid-3 { grid-template-columns: minmax(0, 1fr); } }
+
+/* nav */
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--night); }
+.nav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 9; background: rgba(16,20,28,.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--rule); }
+.nav .wrap { display: flex; align-items: center; gap: 24px; height: 56px; }
+.nav .brand { font-family: var(--display); font-size: 19px; text-decoration: none; white-space: nowrap; color: var(--ink); }
+.nav .brand i { color: var(--ws); }
+.nav .links { display: flex; gap: 22px; overflow-x: auto; scrollbar-width: none; min-width: 0; margin-left: auto; font-size: 14.5px; }
+.nav .links::-webkit-scrollbar { display: none; }
+.nav .links a { text-decoration: none; color: var(--soft); white-space: nowrap; padding-block: 6px; }
+.nav .links a:hover { color: var(--ink); }
+
+/* top */
+.top h1 { font-size: clamp(48px, 7.6vw, 92px); line-height: .95; letter-spacing: -.025em; }
+.top h1 i { font-weight: 300; color: var(--ws); }
+.top .lead { margin-top: 28px; }
+.top .why { margin-top: 18px; }
+
+/* the code */
+.rules { list-style: none; counter-reset: rule; padding: 0; margin: 32px 0 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 36px; }
+.rules li { counter-increment: rule; border-top: 1px solid var(--paper-rule); padding-top: 14px; display: grid; grid-template-columns: 34px minmax(0, 1fr); }
+.rules li::before { content: counter(rule); font-family: var(--display); font-size: 26px; line-height: 1; color: var(--p-mute); }
+.rules b { display: block; font-family: var(--display); font-weight: 500; font-size: 20px; line-height: 1.25; color: var(--p-ink); margin-bottom: 4px; }
+.rules p { font-size: 15.5px; line-height: 1.5; }
+.covers { margin-top: 28px; font-family: var(--display); font-style: italic; font-size: 21px; line-height: 1.4; color: var(--p-ink); }
+@media (max-width: 720px) { .rules { grid-template-columns: minmax(0, 1fr); } }
+
+/* checks and joining */
+.strike { border-left: 3px solid var(--ws); padding-left: 22px; }
+.way { background: var(--night-2); border-radius: 10px; padding: 22px; min-width: 0; }
+.way .n { font-family: var(--display); font-size: 34px; line-height: 1; color: var(--ws); margin-bottom: 10px; }
+.way h3 { font-size: 22px; margin-bottom: 6px; }
+.way p { font-size: 15.5px; line-height: 1.5; }
+.ways { margin-top: 40px; }
+.after { margin-top: 48px; }
+
+/* footer */
+.fine { background: #0b0e14; padding-block: 36px 48px; font-size: 13px; line-height: 1.6; color: var(--mute); }
+.fine a { color: var(--soft); }
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Sections">
+  <div class="wrap">
+    <a class="brand" href="./">Human <i>again</i></a>
+    <div class="links">
+      <a href="#code">The code</a>
+      <a href="#checks">How we check</a>
+      <a href="#join">Joining</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+<header class="band dark top">
+  <div class="wrap">
+    <span class="kicker">Code for allies</span>
+    <h1>Same promises.<br><i>No exceptions.</i></h1>
+    <p class="lead measure">Human Again is open to other builders who make software with AI and want it to be on people's side. An ally's app keeps the same promises <a href="./#slipstream">Slipstream</a>, <a href="./#glimmerwood">Glimmerwood</a> and <a href="./#westering">Westering</a> keep, and we check that it does.</p>
+    <p class="measure why">A lot of software made with AI is made carelessly, and people are right to be wary of it. We'd rather answer that with a standard anyone can check than with an argument.</p>
+  </div>
+</header>
+
+<section class="band paper" id="code" aria-labelledby="code-h">
+  <div class="wrap">
+    <span class="kicker">The code</span>
+    <h2 id="code-h">Nine promises, checked in the open.</h2>
+    <ol class="rules">
+      <li><div><b>On the person's side.</b><p>The app is made to help the person using it, and is never built to harm, deceive, manipulate or exploit anyone: the person using it, the people around them, or anyone else. No dark patterns, no gambling mechanics, and nothing that watches anyone without their knowing.</p></div></li>
+      <li><div><b>Honest.</b><p>The app does what it says and hides nothing, and its README says plainly that AI is used in writing its code.</p></div></li>
+      <li><div><b>Free and open.</b><p>The full source is public under an open-source licence, and the builds you ship are made from that source in public, so anyone can check they match.</p></div></li>
+      <li><div><b>Nothing leaves the computer unless the person asks.</b><p>No telemetry, analytics, crash reports, accounts or cloud by default, and no update checks unless the person turns them on. The only network traffic is what the person asked for.</p></div></li>
+      <li><div><b>No AI features.</b><p>No model runs in the app, and nothing a person types or makes is sent to one. The code itself can be written by AI.</p></div></li>
+      <li><div><b>Nothing is counted against anyone.</b><p>No streaks, scores, badges or leaderboards. Missing a day costs nothing.</p></div></li>
+      <li><div><b>Kindness over guilt.</b><p>Nothing scolds, nags or shames, and every choice about a person's own time stays with them.</p></div></li>
+      <li><div><b>Built to be put down.</b><p>No endless feeds, autoplay, or notifications meant to bring people back. Nothing is designed to keep someone looking for longer than they meant to.</p></div></li>
+      <li><div><b>Read kindly, never as an excuse.</b><p>Where a promise could be read two ways, the reading that's better for the person using the app wins. No promise is ever a reason to harm anyone, and keeping the code vouches for the app, not for anything else its makers do.</p></div></li>
+    </ol>
+    <p class="covers">The code covers everything an app ships, including what its libraries do.</p>
+  </div>
+</section>
+
+<section class="band dark" id="checks" aria-labelledby="checks-h">
+  <div class="wrap grid-2">
+    <div>
+      <span class="kicker">How we check</span>
+      <h2 id="checks-h">Read, then run.</h2>
+      <p style="margin-top:18px">Before an app joins, we read its source and run its latest release in a sandbox with no network, recording every file it opens and everything it tries to reach. We check every release after that in the same way.</p>
+      <p>Anyone can tell us about a broken promise with the <a href="https://github.com/peterwalker78/human-again/issues/new?template=broken-promise.yml">Report a broken promise</a> form, about an ally's app or one of ours.</p>
+    </div>
+    <div class="strike">
+      <span class="kicker">One strike</span>
+      <h2>Break it once, and it's over.</h2>
+      <p style="margin-top:18px">A release that breaks the code ends the alliance. There's no warning period: the app comes off this page, and the page says which promise it broke, and nothing more. The decision is final.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band dark" id="join" aria-labelledby="join-h" style="border-top:1px solid var(--rule)">
+  <div class="wrap">
+    <span class="kicker">Joining</span>
+    <h2 id="join-h">Build something that keeps them?</h2>
+    <div class="grid-3 ways">
+      <div class="way"><div class="n">1</div><h3>Read the code.</h3><p>All nine promises, above. They're the same ones our own apps keep.</p></div>
+      <div class="way"><div class="n">2</div><h3>Ask in the open.</h3><p>Open a <a href="https://github.com/peterwalker78/human-again/issues/new?template=join-as-ally.yml">Join as an ally</a> issue: what the app is for, where its source is, and how it's made.</p></div>
+      <div class="way"><div class="n">3</div><h3>We check it there.</h3><p>We read the source and run the latest release, and answer in the same issue, where anyone can follow along.</p></div>
+    </div>
+    <div class="grid-2 after">
+      <div>
+        <h3 style="margin-bottom:12px">What allies get</h3>
+        <ul class="dots">
+          <li>A place on this page, with a link and a line about what the app is for.</li>
+          <li>The right to say their app keeps the Human Again code, with a link to it.</li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="margin-bottom:12px">Allies</h3>
+        <p>None yet. The first could be yours.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="fine">
+  <div class="wrap">
+    <p>This page follows <a href="https://github.com/peterwalker78/human-again/blob/main/ALLIES.md">ALLIES.md</a>, and every change to the code is in <a href="https://github.com/peterwalker78/human-again/commits/main/ALLIES.md">its history</a>. Allies are told in their issue before a change applies to them.</p>
+    <p><a href="./">Human Again</a>: Slipstream, Glimmerwood and Westering. All code written by AI (Claude, by Anthropic), directed by Peter Walker. This page sets no cookies and counts nothing.</p>
+  </div>
+</footer>
+
+</body>
+</html>

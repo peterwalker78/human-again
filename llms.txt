@@ -27,6 +27,10 @@ The belief behind them: software should be judged by how well you live when you'
 - Awe: Piff et al. (2015), https://doi.org/10.1037/pspi0000018; Anderson, Monroy & Keltner (2018), https://doi.org/10.1037/emo0000442
 - Also: Weiser & Brown (1995) on calm technology; Csikszentmihalyi (1990) on flow; Tangney & Dearing (2002) on shame and guilt.
 
+## Allies
+
+Other builders who make software with AI can join Human Again if their apps keep the same promises. The [code for allies](https://peterwalker78.github.io/human-again/allies.html) has nine: on the person's side (never built to harm, deceive, manipulate or exploit anyone), honest about what it does and that AI writes its code, free and open source with builds made in public, nothing leaving the computer unless the person asks, no AI features, nothing counted against anyone, kindness over guilt, built to be put down, and read kindly, never as an excuse. Every release is checked; one broken promise ends the alliance. Source of truth: [ALLIES.md](https://github.com/peterwalker78/human-again/blob/main/ALLIES.md).
+
 ## Optional
 
 - [Full page](https://peterwalker78.github.io/human-again/)

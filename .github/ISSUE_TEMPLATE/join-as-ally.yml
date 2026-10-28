@@ -1,0 +1,60 @@
+name: Join as an ally
+description: Ask for your app to join Human Again. Read the code for allies first.
+title: "Ally: "
+labels: ["ally"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for wanting to join. Please read the [code for allies](https://github.com/peterwalker78/human-again/blob/main/ALLIES.md) before filling this in: we check every answer against your source and your latest release.
+  - type: input
+    id: app
+    attributes:
+      label: App
+      description: Its name and where people get it.
+    validations:
+      required: true
+  - type: textarea
+    id: for
+    attributes:
+      label: What it's for
+      description: A sentence or two, as you'd tell a friend.
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source and licence
+      description: A link to the full source, and its licence.
+    validations:
+      required: true
+  - type: textarea
+    id: builds
+    attributes:
+      label: How your releases are built
+      description: Where the builds you ship are made. Link the workflow if they're built in CI.
+    validations:
+      required: true
+  - type: textarea
+    id: network
+    attributes:
+      label: What it connects to
+      description: Everything the app reaches over the network, and when. Write "Nothing" if it never does.
+    validations:
+      required: true
+  - type: textarea
+    id: made
+    attributes:
+      label: How it's made
+      description: How much of the code AI wrote, and who directs the work.
+    validations:
+      required: true
+  - type: checkboxes
+    id: code
+    attributes:
+      label: The code
+      options:
+        - label: My app keeps all nine promises in the code for allies.
+          required: true
+        - label: I understand that a release which breaks the code ends the alliance, and that the decision is final.
+          required: true
