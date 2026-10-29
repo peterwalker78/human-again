@@ -13,8 +13,7 @@ The belief behind them: software should be judged by how well you live when you'
 ## How it was made
 
 - Code: written by AI (Claude, by Anthropic).
-- Direction: Peter Walker (https://github.com/peterwalker78), who decides what each app is for, how it looks and feels and when it is finished, and uses all three daily.
-- Ideas that started with Peter include: concentration first (Slipstream holds anything that would pull you out of your work until you pause), the wisp (Glimmerwood's companion that shows how your time online feels instead of counting it), and a game that wants you to leave (Westering ends by pointing you at the real sky).
+- Direction: Peter Walker (https://github.com/peterwalker78), who decides what goes in and uses all three daily.
 
 ## The four promises
 
