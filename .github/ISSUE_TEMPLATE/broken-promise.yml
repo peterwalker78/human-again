@@ -1,6 +1,6 @@
-name: Report a broken promise
-description: An ally's app, or one of ours, breaks the code for allies.
-title: "Broken promise: "
+name: Report a problem
+description: An ally's app, or one of ours, stops keeping the code for allies.
+title: "Problem: "
 labels: ["broken promise"]
 body:
   - type: input
@@ -14,15 +14,10 @@ body:
     attributes:
       label: Which promise
       options:
-        - On people's side
-        - Honest
-        - Open, and paid for once at most
-        - Nothing leaves the computer unless people ask
-        - No AI features
-        - Nothing is counted against anyone
-        - Kindness over guilt
-        - Built to be put down
-        - When in doubt, people come first
+        - Honest and open
+        - It stays on the user's computer
+        - Made to be put down
+        - A real tool, not an AI show
     validations:
       required: true
   - type: textarea

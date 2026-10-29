@@ -54,7 +54,7 @@ body:
     attributes:
       label: The code
       options:
-        - label: My app keeps all nine promises in the code for allies.
+        - label: My app keeps all four promises in the code for allies.
           required: true
-        - label: I understand that a release which breaks the code ends the alliance, and that the decision is final.
+        - label: I understand that if a release stops keeping the code, the app comes off the list until it is fixed.
           required: true
