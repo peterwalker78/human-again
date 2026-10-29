@@ -13,10 +13,16 @@ The belief behind them: software should be judged by how well you live when you'
 ## How it was made
 
 - Code: written by AI (Claude, by Anthropic).
-- Direction: Peter Walker (https://github.com/peterwalker78), who sets the vision, makes the design calls and uses all three daily.
-- Measured from the AI session transcripts, 14 Sep to 23 Oct 2026 (minimums): 615+ prompts, 270+ design decisions, 75+ ideas that started with Peter, 95+ bugs found through daily use rather than tests, 6+ false "it works" reports caught, 5 bugs reported upstream (one fixed).
+- Direction: Peter Walker (https://github.com/peterwalker78), who decides what each app is for, how it looks and feels and when it is finished, and uses all three daily.
+- Ideas that started with Peter include: concentration first (Slipstream holds anything that would pull you out of your work until you pause), the wisp (Glimmerwood's companion that shows how your time online feels instead of counting it), and a game that wants you to leave (Westering ends by pointing you at the real sky).
+
+## The four promises
+
+Honest and open (free, open source, plain about how they are made, AI included); it stays on your computer (no telemetry, accounts or cloud); made to be put down (no streaks, scores, badges or nagging, nothing blocked, a day away costs nothing); no AI features, ever (the apps never generate anything as you use them; everything they show is fixed and checked by a person).
 
 ## Research the design draws on
+
+These are the reasons each feature was built the way it is, not proof that the apps help. Only people using them can say that.
 
 - Interruptions raise stress: Mark, Gudith & Klocke (2008), https://doi.org/10.1145/1357054.1357072
 - Self-monitoring social media use reduced anxiety: Hunt et al. (2018), https://doi.org/10.1521/jscp.2018.37.10.751

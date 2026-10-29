@@ -15,7 +15,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Human Again">
 <meta property="og:title" content="Human again. Software that's on your side.">
-<meta property="og:description" content="A desktop, a web browser and a night sky for Linux, made to give people back their attention and their evenings. Free and open source.">
+<meta property="og:description" content="A desktop, a web browser and a night sky for Linux, made so the hours at a screen feel better, and stopping comes easily. Free and open source.">
 <meta property="og:url" content="https://peterwalker78.github.io/human-again/">
 <meta property="og:image" content="https://peterwalker78.github.io/human-again/img/og.png">
 <meta property="og:image:width" content="1200">
@@ -332,20 +332,13 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 @media (max-width: 520px) { .parts { grid-template-columns: minmax(0, 1fr); } }
 
 /* made by */
-.madeby .figs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(24px, 4vw, 48px); margin-top: 44px; }
-.figs section { min-width: 0; }
-.figs h3 { padding-bottom: 12px; border-bottom: 1px solid var(--rule); margin-bottom: 4px; }
-.figs dl { margin: 0; }
-.figs dl > div { display: grid; grid-template-columns: clamp(92px, 11vw, 132px) minmax(0, 1fr); gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--rule); align-items: baseline; }
-.figs dt { font-family: var(--display); font-size: clamp(32px, 4vw, 42px); line-height: 1; color: var(--c); font-variant-numeric: tabular-nums; }
-.figs dd { margin: 0; font-size: 15.5px; line-height: 1.45; }
-.figs dd strong { display: block; font-size: 16.5px; }
-.method { margin-top: 24px; font-size: 14px; color: var(--mute); max-width: 80ch; }
+.ideas { margin-top: 36px; }
+.ideas > div { border-top: 2px solid var(--c); padding-top: 14px; }
+.ideas h3 { margin: 6px 0 6px; }
 .moments-ai { margin-top: 48px; }
 .moments-ai article { border-top: 1px solid var(--rule); padding-top: 16px; }
 .moments-ai h3 { font-size: 20px; margin-bottom: 6px; }
 .moments-ai p { font-size: 15.5px; line-height: 1.5; }
-@media (max-width: 860px) { .madeby .figs { grid-template-columns: minmax(0, 1fr); } }
 
 /* science */
 .sci-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: clamp(32px, 5vw, 64px); }
@@ -424,7 +417,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
       <a href="#glimmerwood">Glimmerwood</a>
       <a href="#westering">Westering</a>
       <a href="#made-by">Who made it</a>
-      <a href="#why-it-works">Why it works</a>
+      <a href="#why-it-works">The research</a>
       <a href="#questions">Questions</a>
     </div>
   </div>
@@ -439,7 +432,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
       <span class="kicker">Slipstream · Glimmerwood · Westering</span>
       <h1>Human <i>again.</i></h1>
       <p class="sub">Software that's on your side.</p>
-      <p>A desktop, a web browser and a night sky for Linux, made to give people back their attention, their evenings and the hours a screen was quietly taking. Free and open source.</p>
+      <p>A desktop, a web browser and a night sky for Linux, made so the hours at a screen feel better, and stopping comes easily. Free and open source.</p>
       <div class="trio">
         <a href="#slipstream" style="--c:var(--ss)"><b>Slipstream</b><span>the desktop, for when you work</span></a>
         <a href="#glimmerwood" style="--c:var(--gw)"><b>Glimmerwood</b><span>the browser, for when you're online</span></a>
@@ -476,7 +469,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
   <div class="wrap">
     <span class="kicker" style="text-align:center" id="belief-h">What we believe</span>
     <blockquote>Software should be judged by how well you live when you're <em>not</em> using it.</blockquote>
-    <p class="after">So we're building the other kind: three free apps that guard your attention while you work, tell you the truth about your time online, and, when the day is done, send you outside.</p>
+    <p class="after">Here are three free apps that try to pass that test.</p>
     <div class="grid-3 apps">
       <div class="app" style="--c:var(--ss)"><img src="img/ss-ring.webp" width="192" height="192" alt="Slipstream's logo"><div><span class="when">When you work</span><h3>Slipstream</h3><p>A whole Linux desktop, keyboard-first, where nothing interrupts you while you're typing.</p></div></div>
       <div class="app" style="--c:var(--gw)"><img src="img/gw-icon.svg" width="56" height="56" alt="Glimmerwood's icon: the wisp on moss"><div><span class="when">When you're online</span><h3>Glimmerwood</h3><p>A quiet browser whose small companion brightens when you learn or make something, and grows sleepy in an endless feed.</p></div></div>
@@ -549,9 +542,9 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
         <span class="kicker" style="color:var(--gw-deep)">The web browser</span>
         <img class="icon" src="img/gw-icon.svg" width="84" height="84" alt="The wisp, a small glowing flame with a friendly face, resting on moss">
         <h2 id="gw-h">Glimmerwood</h2>
-        <p class="tag">The web browser that's on your side. Probably the only browser that's happiest when you're not using it.</p>
+        <p class="tag">Probably the only browser that's happiest when you're not using it.</p>
         <p>A small, glowing flame with a face lives in the corner of the toolbar. It's yours, and it reflects the quality of your time online the way the sky reflects the weather.</p>
-        <p>Somewhere that restores you and it brightens and lets off little motes of light. Sink into an endless feed and it clouds over, grows tired and drifts to the edge of its nook, as if it's ready to go outside and hoping you'll come too. <strong>It never scolds you.</strong></p>
+        <p>Somewhere that restores you and it brightens and lets off little motes of light. Sink into an endless feed and it clouds over, grows tired and drifts to the edge of its nook, as if it's ready to go outside and hoping you'll come too.</p>
       </div>
       <img class="shot" src="img/browsing.webp" width="1400" height="934" loading="lazy" alt="Glimmerwood showing a Wikipedia article. In the corner of the toolbar the wisp is bright and smiling, with its caption open.">
     </div>
@@ -559,7 +552,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
       <ul class="dots" style="--c:var(--gw)">
         <li><strong>Noticing, not nagging.</strong> The wisp does the noticing, so the choice stays yours.</li>
         <li><strong>A garden that grows on good days.</strong> Every new tab opens on a calm page made on your computer, and suggests somewhere worth going from over 300 researched corners of the web.</li>
-        <li><strong>See your days, not a scoreboard.</strong> No minutes, scores or percentages anywhere: just the pattern, and the kind of mirror that makes the next choice easier.</li>
+        <li><strong>See your days, not a scoreboard.</strong> No minutes, scores or percentages anywhere, just the pattern.</li>
         <li><strong>Nothing leaves your computer.</strong> No accounts, telemetry, update pings or cloud. The only traffic is the pages you visit.</li>
       </ul>
       <p class="cap" style="margin-top:22px"><a href="https://github.com/peterwalker78/glimmerwood">More about Glimmerwood</a>: the garden, the wisp's days and how little leaves your computer.</p>
@@ -590,15 +583,15 @@ flatpak install --user glimmerwood-x86_64.flatpak</pre><button type="button" dat
     <div class="grid-2">
       <p class="lead" style="font-family:var(--display);font-style:italic;font-size:clamp(24px,2.8vw,32px);line-height:1.25">Tonight's real sky, and then the real sky outside.</p>
       <div>
-        <p>A small stargazing game that is designed to let you go. A few quiet minutes at the end of the day to come back to what matters: the people who are there for you, something to look forward to, and setting down what's weighing on you so it's lighter in the morning.</p>
+        <p>A small stargazing game for a few quiet minutes at the end of the day, to come back to what matters: the people who are there for you, something to look forward to, and setting down what's weighing on you so it's lighter in the morning.</p>
         <p>It draws the sky over you right now, in fine dots: the real stars, the Moon at its real phase, the planets that are really up. The wisp from Glimmerwood is out for the night, on a tuft of moss on the horizon.</p>
       </div>
     </div>
 
     <div class="sub-sec" style="--c:var(--ws-blue)">
-      <span class="kicker">Built to let you go</span>
+      <span class="kicker">The ending</span>
       <h2>It wants you to leave.</h2>
-      <p class="lead" style="margin:18px 0 22px">Most apps are built to keep you. This one is built to let you go, and says so, so there's no trick in it.</p>
+      <p class="lead" style="margin:18px 0 22px">And it says so from the start, so there's no trick in it.</p>
       <ul class="dots" style="--c:var(--ws)">
         <li><strong>The sky is finite.</strong> Only so many things to find each night; then the sky is done until it has turned.</li>
         <li><strong>It offers the way out.</strong> About a quarter of an hour in, once, a line says how to wind down. It never says how long you've been here.</li>
@@ -625,31 +618,16 @@ flatpak install --user westering-x86_64.flatpak</pre><button type="button" data-
     <span class="kicker">Who made it</span>
     <h2 id="made-h">Written by AI.<br>Directed by a person.</h2>
     <div class="grid-2" style="margin-top:28px">
-      <p class="lead">All of the code in Slipstream, Glimmerwood and Westering is written by AI: Claude, made by Anthropic. We say so plainly, because it matters how software you trust was made.</p>
+      <p class="lead">All of the code in Slipstream, Glimmerwood and Westering is written by AI: Claude, made by Anthropic. We'd rather you heard it from us.</p>
       <div>
-        <p>What the AI can't do is decide what the apps are for, judge how they feel, notice where they fall short, or know when they really work. That came from <strong>Peter Walker</strong>, who set the vision, made the calls, and has used all three every day since the first build, catching what no test would.</p>
-        <p>None of the apps has AI features, and none ever will.</p>
+        <p>What each app is for, how it should look and feel, and when it's finished is up to <strong>Peter Walker</strong>, who uses all three every day. The ideas that make them different came from him too. Here are three.</p>
       </div>
     </div>
-    <div class="figs">
-      <section aria-labelledby="fig-vision" style="--c:var(--ws)">
-        <h3 id="fig-vision">The vision</h3>
-        <dl>
-          <div><dt>615+</dt><dd><strong>Prompts written by Peter</strong>Across 61 or more working sessions; only about twenty were a bare “continue” or “yes”.</dd></div>
-          <div><dt>270+</dt><dd><strong>Design decisions</strong>Approvals, rejections and choices between options, from the logo to what each app must never do.</dd></div>
-          <div><dt>75+</dt><dd><strong>Ideas that started with him</strong>Features and principles that came from Peter, not the AI: concentration first, the wisp, a game that wants you to leave.</dd></div>
-        </dl>
-      </section>
-      <section aria-labelledby="fig-correct" style="--c:var(--ss)">
-        <h3 id="fig-correct">Technical correctness</h3>
-        <dl>
-          <div><dt>95+</dt><dd><strong>Bugs found by living with the apps</strong>Faults that passed every automated test and only showed up in daily use on real hardware.</dd></div>
-          <div><dt>6+</dt><dd><strong>False “it works” caught</strong>Times the AI reported something fixed or finished and it wasn't. Peter accepts “it works” only after watching it work.</dd></div>
-          <div><dt>5</dt><dd><strong>Bugs reported upstream</strong>Problems traced to the software underneath, such as the WebKitGTK web engine and the Linux kernel. One is already fixed.</dd></div>
-        </dl>
-      </section>
+    <div class="ideas grid-3">
+      <div style="--c:var(--ss)"><span class="when">Slipstream</span><h3>Concentration first.</h3><p>Anything that would pull you out of your work waits until you pause.</p></div>
+      <div style="--c:var(--gw)"><span class="when">Glimmerwood</span><h3>The wisp.</h3><p>A little flame that shows how your time online feels, instead of counting it.</p></div>
+      <div style="--c:var(--ws-blue)"><span class="when">Westering</span><h3>A game that wants you to leave.</h3><p>Its last line points you at something real in tonight's sky.</p></div>
     </div>
-    <p class="method">Counted from the AI's own session transcripts for all three apps and the agent-notify plugin, 14 September to 23 October 2026. These are minimums: the transcripts miss the first week of building, and planning done in chat. Between them, the three repositories hold 790 commits on their main branches.</p>
   </div>
 </section>
 
@@ -657,10 +635,10 @@ flatpak install --user westering-x86_64.flatpak</pre><button type="button" data-
 <section class="band paper" id="why-it-works" aria-labelledby="sci-h">
   <div class="wrap sci-grid">
     <div>
-      <span class="kicker">Why it works</span>
-      <h2 id="sci-h">Built on what we know about people.</h2>
-      <p class="lead" style="margin-top:20px">None of this is new science. It's well-studied psychology, applied by software that has nothing to gain from your time.</p>
-      <p style="margin-top:14px">Where the evidence is modest, we say so: nobody has shown that stargazing itself improves sleep. The claim is only that a little dark and a big sky beat another half hour of screen.</p>
+      <span class="kicker">The research</span>
+      <h2 id="sci-h">The research behind the design.</h2>
+      <p class="lead" style="margin-top:20px">Each feature started from something well studied. That's why it was built the way it is. It doesn't prove the apps will help you. Only people using them can tell us that, and we'd love to hear.</p>
+      <p style="margin-top:14px">Some of the evidence is modest. Nobody has shown that stargazing improves sleep; we just think a little dark and a big sky beat another half hour of screen.</p>
     </div>
     <div style="overflow-x:auto;min-width:0">
       <table class="sci-table">
@@ -670,7 +648,7 @@ flatpak install --user westering-x86_64.flatpak</pre><button type="button" data-
           <tr><td><strong>Calm technology</strong> informs at the edge of attention instead of demanding the centre of it.<span class="src">Weiser &amp; Brown, 1995</span></td><td>Streams show what an app is doing from the corner of your eye; the wisp sits quietly in a corner.</td><td class="app-name" style="color:var(--ss-deep);white-space:normal">Slipstream and Glimmerwood</td></tr>
           <tr><td><strong>Flow,</strong> deep absorption in a task that stretches you, is among the most satisfying states people report.<span class="src">Csikszentmihalyi, 1990</span></td><td>A keyboard-first desktop where every window is one key away, and nothing pulls you out.</td><td class="app-name" style="color:var(--ss-deep)">Slipstream</td></tr>
           <tr><td><strong>Noticing changes behaviour.</strong> Students who only kept track of their social media use came out less anxious.<span class="src"><a href="https://doi.org/10.1521/jscp.2018.37.10.751">Hunt and others, 2018</a></span></td><td>The wisp notices for you, so you see the pattern and the choice stays yours.</td><td class="app-name" style="color:var(--gw-deep)">Glimmerwood</td></tr>
-          <tr><td><strong>Shame makes people hide</strong> from a problem; guilt about a specific act makes them repair it.<span class="src">Tangney &amp; Dearing, 2002</span></td><td>Nothing scolds. At its heaviest the wisp looks sleepy, never sad, and nothing is ever blocked.</td><td class="app-name" style="color:var(--gw-deep)">Glimmerwood</td></tr>
+          <tr><td><strong>Shame makes people hide</strong> from a problem; guilt about a specific act makes them repair it.<span class="src">Tangney &amp; Dearing, 2002</span></td><td>At its heaviest the wisp looks sleepy, never sad, and nothing is ever blocked.</td><td class="app-name" style="color:var(--gw-deep)">Glimmerwood</td></tr>
           <tr><td><strong>Bright screens in the evening</strong> delay the body's sleep hormone and push sleep later.<span class="src"><a href="https://doi.org/10.1073/pnas.1418490112">Chang and others, 2015</a></span></td><td>Night light follows the real sun; the wisp winds down after eleven; Westering dims before the end.</td><td class="app-name" style="color:var(--ws-deep)">All three</td></tr>
           <tr><td><strong>Gratitude lifts mood.</strong> People who wrote weekly about what they were grateful for felt better about their lives.<span class="src"><a href="https://doi.org/10.1037/0022-3514.84.2.377">Emmons &amp; McCullough, 2003</a></span></td><td>Small questions about the people who are there for you, without ever naming gratitude.</td><td class="app-name" style="color:var(--ws-deep)">Westering</td></tr>
           <tr><td><strong>If-then plans</strong> markedly raise the odds of following through on a goal.<span class="src"><a href="https://doi.org/10.1016/S0065-2601(06)38002-1">Gollwitzer &amp; Sheeran, 2006</a></span></td><td>A plan charted for a worry: a wish, the best of it, what's in the way, and what you'll do if it happens.</td><td class="app-name" style="color:var(--ws-deep)">Westering</td></tr>
@@ -701,28 +679,26 @@ flatpak install --user westering-x86_64.flatpak</pre><button type="button" data-
   <div class="wrap grid-2">
     <div>
       <span class="kicker">What all three promise</span>
-      <h2 id="prom-h">Trust is the whole product.</h2>
-      <p style="margin-top:18px">Software that notices how your time feels has to be trustworthy, so these aren't settings. They're how the apps are built.</p>
+      <h2 id="prom-h">Four promises.</h2>
+      <p style="margin-top:18px">They're built into the apps rather than left as settings, and they're the same four we ask of any app we point you to.</p>
       <div class="promises">
-        <div><b>Nothing leaves your computer.</b><p>No telemetry, accounts or cloud. Westering can't even reach the network.</p></div>
-        <div><b>Nothing is counted against you.</b><p>No streaks, scores or badges. Missing a day costs you nothing.</p></div>
-        <div><b>Kindness over guilt.</b><p>Nothing scolds or nags, no page is blocked, and every choice stays yours.</p></div>
-        <div><b>No AI features, ever.</b><p>The code is written by AI; the apps contain none. Software that does what it says.</p></div>
-        <div><b>Built to be put down.</b><p>Nothing is designed to keep you looking for longer than you meant to.</p></div>
-        <div><b>Free and open.</b><p>Read every line, build it yourself, and keep it for ever.</p></div>
+        <div><b>Honest and open.</b><p>Free, open source, and plain about how they're made, AI included. Read every line, build it yourself, keep it for ever.</p></div>
+        <div><b>It stays on your computer.</b><p>No telemetry, accounts or cloud. Westering can't even reach the network.</p></div>
+        <div><b>Made to be put down.</b><p>No streaks, scores, badges or nagging, and nothing is blocked. A day away costs you nothing.</p></div>
+        <div><b>No AI features, ever.</b><p>AI wrote the code, but the apps never make anything up as you go. Everything they show you is fixed, and was checked by a person.</p></div>
       </div>
-      <p style="margin-top:22px">Other builders can join us if their apps keep the same promises: read the <a href="allies.html">code for allies</a>.</p>
+      <p style="margin-top:22px">Made something in the same spirit? Read the <a href="allies.html">code for allies</a>.</p>
     </div>
     <div>
       <span class="kicker">Why now</span>
-      <h2>The tide is turning.</h2>
+      <h2>A good moment for it.</h2>
       <div class="timeline">
         <div><span class="d">Oct 2025</span><p>Windows 10 support ends, leaving millions of working computers looking for somewhere to go.</p></div>
         <div><span class="d">Dec 2025</span><p>Australia's minimum age of 16 for social media accounts comes into force.</p></div>
         <div><span class="d">Feb 2026</span><p>The European Commission's <a href="https://digital-strategy.ec.europa.eu/en/news/commission-preliminarily-finds-tiktoks-addictive-design-breach-digital-services-act">preliminary findings</a> say TikTok's addictive design breaches the Digital Services Act.</p></div>
         <div><span class="d">Mar 2026</span><p>Linux passes 5% of Steam's hardware survey for the first time.</p></div>
       </div>
-      <p class="so">Regulators are naming addictive design, and more people than ever are arriving on Linux. They deserve software that's on their side.</p>
+      <p class="so">Regulators are starting to name addictive design, and more people are trying Linux than ever.</p>
     </div>
   </div>
 </section>
@@ -745,12 +721,12 @@ flatpak install --user westering-x86_64.flatpak</pre><button type="button" data-
 <section class="band dark" id="join" aria-labelledby="join-h" style="border-top:1px solid var(--rule)">
   <div class="wrap">
     <span class="kicker">Be part of it</span>
-    <h2 id="join-h">Help us make people human again.</h2>
-    <p class="lead measure" style="margin-top:18px">All three apps exist, run every day, and are free for anyone to use. What comes next is about reaching the people they're for.</p>
+    <h2 id="join-h">Give one a try.</h2>
+    <p class="lead measure" style="margin-top:18px">All three are free and ready to use. The easiest start takes a minute and installs nothing.</p>
     <div class="grid-3 ways">
       <div class="way"><div class="n">1</div><h3>Use them.</h3><p>Try Slipstream in a window on the desktop you have now, installing nothing, by adding <code>-- --try</code> to the install command.</p></div>
-      <div class="way"><div class="n">2</div><h3>Build with us.</h3><p>Write a plugin, propose a site for the right list, test on hardware we haven't reached, or open an issue. Every report makes the apps better for everyone.</p></div>
-      <div class="way"><div class="n">3</div><h3>Back the work.</h3><p>If you believe technology should be judged by how well people live when they put it down, we'd like to talk about taking this further, together.</p></div>
+      <div class="way"><div class="n">2</div><h3>Tell us how it felt.</h3><p>Start a discussion or open an issue on GitHub. Or write a plugin, suggest a site for the garden, or test on hardware we haven't reached.</p></div>
+      <div class="way"><div class="n">3</div><h3>Back the work.</h3><p>If you'd like to help take this further, we'd love to talk.</p></div>
     </div>
     <div class="next grid-2">
       <div>
@@ -776,7 +752,6 @@ flatpak install --user westering-x86_64.flatpak</pre><button type="button" data-
     <div class="over">
       <div class="wrap">
         <h2>Close the laptop.<br><i>Go and look up.</i></h2>
-        <p>Software that measures its success by how well you live when you're not using it.</p>
       </div>
     </div>
   </div>
