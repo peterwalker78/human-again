@@ -125,10 +125,7 @@
       "@type": "FAQPage",
       "@id": "https://peterwalker78.github.io/human-again/#questions",
       "mainEntity": [
-        { "@type": "Question", "name": "What is Human Again?", "acceptedAnswer": { "@type": "Answer", "text": "Human Again is the shared aim of three free Linux apps: Slipstream, a keyboard-first desktop; Glimmerwood, a quiet web browser; and Westering, a night-sky game for winding down. Each is built to give people their attention back rather than to hold on to it." } },
         { "@type": "Question", "name": "Are they free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. All three are free and open source under the GNU GPL, version 3 or later, with no accounts, adverts or paid tiers." } },
-        { "@type": "Question", "name": "Was the code written by AI?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. All of the code is written by AI (Claude, by Anthropic). The vision, the design decisions and the testing come from Peter Walker, who uses all three apps every day. None of the apps has AI features, and none ever will." } },
-        { "@type": "Question", "name": "Do they collect any data?", "acceptedAnswer": { "@type": "Answer", "text": "No. There is no telemetry and no account. Glimmerwood's only network traffic is the pages you visit, and Westering has no network permission at all." } },
         { "@type": "Question", "name": "Which computers do they run on?", "acceptedAnswer": { "@type": "Answer", "text": "x86_64 Linux. Slipstream needs Debian 13's libraries or newer and is tested on Debian, Ubuntu, Fedora, Arch and openSUSE. Glimmerwood and Westering are Flatpaks that run on any Linux desktop. There are no Windows or macOS versions." } },
         { "@type": "Question", "name": "Can I use one without the others?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Each is its own project. Slipstream's installer offers the other two, but Glimmerwood and Westering run on any Linux desktop." } },
         { "@type": "Question", "name": "Can other apps join?", "acceptedAnswer": { "@type": "Answer", "text": "Most useful apps can, if they're at least as plain-dealing as ours: running on the user's own computer, without a server behind them, with fixed words and pictures that can be opened and checked, and no AI making things on the fly. They keep the same four promises, checked in the open. If a promise breaks, the app comes off the list until it is fixed. The code for allies is at https://peterwalker78.github.io/human-again/allies.html" } }
@@ -525,83 +522,15 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
     </div>
 
     <div class="sub-sec">
-      <span class="kicker">Concentration first</span>
-      <h2>Nothing interrupts you.</h2>
-      <div class="feature">
-        <div class="stack">
-          <p class="lead">You know the moment: halfway through a thought, something pops up, and the thought is gone. Slipstream can tell <i>that</i> you're typing, never what, and keeps that moment yours.</p>
-          <figure style="margin:0">
-            <picture><source media="(prefers-reduced-motion: reduce)" srcset="img/concentration-still.webp"><img class="shot" src="img/concentration.webp" width="960" height="132" loading="lazy" alt="Typing in a terminal while the bell on the bar counts three notifications and nothing pops up. At the pause, one card appears: 3 while you were typing."></picture>
-            <figcaption class="cap">Three messages arrive while you type. Nothing pops up until you pause.</figcaption>
-          </figure>
-          <ul class="dots">
-            <li><strong>Notifications wait for a pause,</strong> then arrive together as one card. Urgent ones never wait, and nothing waits more than fifteen minutes.</li>
-            <li><strong>Windows you didn't ask for can't barge in</strong> or run off with your keyboard. They pour into a stream at the edge of the screen instead.</li>
-            <li><strong>Hold Caps Lock for Awake,</strong> and the screen won't fade or lock by itself until you hold it again.</li>
-            <li><strong>Nothing records your screen</strong> without asking you first, by name.</li>
-          </ul>
-        </div>
-        <div class="streams">
-          <picture><source media="(prefers-reduced-motion: reduce)" srcset="img/streams-slipstream-still.webp"><img src="img/streams-slipstream.webp" width="300" height="900" loading="lazy" alt="The right edge of the screen: a window pours into a new stream of light beside two already running, each under its app's icon. The busy app's stream pours fast and bright; the idle one sends a few slow grey streaks."></picture>
-          <div>
-            <h3>What you put away keeps you posted.</h3>
-            <p style="margin-top:10px">Put a window away and it pours down the side of the screen as a stream of light, still running.</p>
-            <p>A busy app pours fast and bright; a quiet one sends a few slow grey streaks. A download finishing catches your eye without you going to look.</p>
-            <p>Rest the pointer on a stream to see what it's using right now. Click it to bring the window back.</p>
-          </div>
-        </div>
-      </div>
-      <div class="note">
-        <p><strong>No telemetry, ever.</strong> What you do on your computer stays on your computer. It never checks for updates by itself.</p>
-        <p><strong>No AI features, ever,</strong> and nothing built to keep you looking for longer than you meant to.</p>
-      </div>
-    </div>
+      <span class="kicker">What it does</span>
+      <ul class="dots">
+        <li><strong>Notifications wait for a pause,</strong> then arrive together as one card. Urgent ones never wait, and nothing waits more than fifteen minutes.</li>
+        <li><strong>What you put away keeps you posted.</strong> Put a window away and it pours down the side of the screen as a stream of light, still running.</li>
+        <li><strong>Every window, one key away.</strong> One shortcut tips the whole desktop back. Press a letter and you land on that window.</li>
+        <li><strong>Step away, and it comes alive.</strong> Twenty living wallpapers, worked out live as you watch, run behind your windows and take the screen when you step away.</li>
+      </ul>
+      <p style="margin-top:22px"><a href="https://github.com/peterwalker78/slipstream-desktop">More about Slipstream</a>: the full tour of concentration, the keyboard, the wallpapers and plugins.</p>
 
-    <div class="sub-sec">
-      <span class="kicker">The keyboard</span>
-      <h2>Every window, one key away.</h2>
-      <div class="feature">
-        <figure style="margin:0">
-          <picture><source media="(prefers-reduced-motion: reduce)" srcset="img/bullet-still.webp"><img class="shot" src="img/bullet.webp" width="960" height="600" loading="lazy" alt="Bullet time: the desktop tips back into 3D with every workspace beside the last and an amber letter over each window; a key press glides across to the next workspace, and Enter drops back into it."></picture>
-          <figcaption class="cap">Bullet time: every workspace laid out, a letter on each window, everything slowed to a quarter of its speed.</figcaption>
-        </figure>
-        <div class="stack">
-          <p class="lead">One shortcut tips the whole desktop back. Press a letter and you land on that window.</p>
-          <ul class="dots">
-            <li><strong>Keys your hands already know.</strong> Windows' keys from the start, or a Mac's or Omarchy's habits instead, and every hint on screen follows your choice.</li>
-            <li><strong>Tiling that isn't all or nothing.</strong> Hold Super+T and pick an arrangement from pictures of your own windows.</li>
-            <li><strong>An explorer that answers.</strong> Tap Super and type an app, a setting, a file, <code>15% of 80</code> or <code>5 km in miles</code>.</li>
-            <li><strong>New to tiling? Take the tour.</strong> Fourteen short lessons start from the keys you know, say why before what to press, and play out on a miniature of your own desktop.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="sub-sec">
-      <span class="kicker">The living wallpaper</span>
-      <h2>Step away, and it comes alive.</h2>
-      <p class="measure" style="margin-top:18px">There are twenty wallpapers, and most aren't animations at all: they're worked out live as you watch, so they never run quite the same way twice. Whichever you choose runs behind your windows all along, and takes the screen when you step away. Every effect has a reduced-motion version, switched live from Settings.</p>
-      <div class="walls">
-        <div><picture><source media="(prefers-reduced-motion: reduce)" srcset="img/wallpaper-attractor-still.webp"><img src="img/wallpaper-attractor.webp" width="480" height="300" loading="lazy" alt="Attractor: the logo unravelling into a strange attractor drawn in dots"></picture><b>Attractor</b><span>The logo unravels into a strange attractor, then winds back into letters.</span></div>
-        <div><picture><source media="(prefers-reduced-motion: reduce)" srcset="img/wallpaper-galaxies-still.webp"><img src="img/wallpaper-galaxies.webp" width="480" height="300" loading="lazy" alt="Galaxies: two spiral galaxies drawn in dots, circling each other"></picture><b>Galaxies</b><span>Two galaxies collide, then the collision runs backwards.</span></div>
-        <div><picture><source media="(prefers-reduced-motion: reduce)" srcset="img/wallpaper-physarum-still.webp"><img src="img/wallpaper-physarum.webp" width="480" height="300" loading="lazy" alt="Physarum: a slime mould spreading out of the logo in amber veins"></picture><b>Physarum</b><span>A slime mould creeps out over the screen in amber veins.</span></div>
-        <div><picture><source media="(prefers-reduced-motion: reduce)" srcset="img/wallpaper-life-still.webp"><img src="img/wallpaper-life.webp" width="480" height="300" loading="lazy" alt="Life: glowing Game of Life cells swirling round the logo"></picture><b>Life</b><span>Conway's Game of Life, glowing and swirling to a beat.</span></div>
-        <div><picture><source media="(prefers-reduced-motion: reduce)" srcset="img/wallpaper-coral-still.webp"><img src="img/wallpaper-coral.webp" width="480" height="300" loading="lazy" alt="Coral: a chemical reaction growing in stripes and spots from the letters"></picture><b>Coral</b><span>The letters seed a chemical reaction that grows in stripes and spots.</span></div>
-        <div><picture><source media="(prefers-reduced-motion: reduce)" srcset="img/wallpaper-warp-still.webp"><img src="img/wallpaper-warp.webp" width="480" height="300" loading="lazy" alt="Warp: a tunnel of streaks with the logo rising from its vanishing point"></picture><b>Warp</b><span>A tunnel of streaks, the logo rising from its vanishing point.</span></div>
-      </div>
-    </div>
-
-    <div class="sub-sec">
-      <span class="kicker">Make it yours</span>
-      <div class="feature flip">
-        <img class="shot" src="img/plugins-still.webp" width="630" height="880" loading="lazy" alt="The plugin panel under the clock with four cards: a focus timer, the weather, the computer's processor, memory and disk, and backups." style="max-width:380px">
-        <div class="stack">
-          <h2>Plugins beside the clock.</h2>
-          <p>Little apps, your own or other people's, each add a card to a panel that drops from the bar. Anything that prints a line of JSON can be one.</p>
-          <p><strong>Nothing runs until you've looked.</strong> Each plugin runs in a sandbox that reaches only what it lists, and Settings says in plain words what that is before you turn it on. If its files change later, it switches itself off until you've looked again.</p>
-          <p><strong>Your colours, everywhere.</strong> Pick one of ten sets of three colours that go together, and the whole desktop follows, Settings included.</p>
-        </div>
-      </div>
       <div class="install">
         <h3>Get Slipstream</h3>
         <p>One command downloads the newest release, checks its published checksum and signature, and says what it will do before it writes anything. Then log out and choose Slipstream on the login screen. Add <code>-- --try</code> to open it in a window first, installing nothing.</p>
@@ -626,47 +555,14 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
       </div>
       <img class="shot" src="img/browsing.webp" width="1400" height="934" loading="lazy" alt="Glimmerwood showing a Wikipedia article. In the corner of the toolbar the wisp is bright and smiling, with its caption open.">
     </div>
-    <div class="wisps">
-      <div><img src="img/wisp-bright.webp" width="300" height="109" loading="lazy" alt="The wisp, bright: open eyes and a smile"><b>Bright</b><span>rested and ready</span></div>
-      <div><img src="img/wisp-happy.webp" width="300" height="109" loading="lazy" alt="The wisp, happy: eyes closed in a smile"><b>Happy</b><span>somewhere that restores you</span></div>
-      <div><img src="img/wisp-clouded.webp" width="300" height="109" loading="lazy" alt="The wisp, clouded: pale blue-grey and wary"><b>Clouded</b><span>a long scroll is weighing on it</span></div>
-      <div><img src="img/wisp-sleepy.webp" width="300" height="109" loading="lazy" alt="The wisp, sleepy: a dim ember on dry moss"><b>Sleepy</b><span>time for a breather</span></div>
-      <div><img src="img/wisp-dozing.webp" width="300" height="109" loading="lazy" alt="The wisp, dozing while you're away"><b>Dozing</b><span>you're away, and it's resting too</span></div>
-      <div><img src="img/wisp-night.webp" width="300" height="109" loading="lazy" alt="The wisp winding down: a warm glow late at night"><b>Winding down</b><span>late at night, with you</span></div>
-    </div>
-
-    <div class="grid-2 sub-sec" style="margin-top:72px">
-      <div class="stack">
-        <img class="shot" src="img/home.webp" width="1400" height="934" loading="lazy" alt="Glimmerwood's Home page: a garden under an evening sky, a greeting, and cards for good places such as Project Gutenberg and Wikipedia.">
-        <h3>A garden that grows on good days.</h3>
-        <p>Every new tab opens on a calm page made on your computer. A quiet day brings moss, a day of learning ferns, a calm night fireflies. <strong>Nothing ever wilts, and missing a day costs nothing.</strong> Instead of the sites you visit most, it suggests somewhere worth going: over 300 researched corners of the web, from live nature cams and free books to museums and gentle puzzles.</p>
-      </div>
-      <div class="stack">
-        <img class="shot" src="img/days.webp" width="1230" height="975" loading="lazy" alt="The wisp's days: today from bright to busy, seven day columns split into restoring, everyday and wearing time, and the sites that moved it this week.">
-        <h3>See your days, not a scoreboard.</h3>
-        <p>Click the wisp for how today has felt, the shape of your week, and which places restored you or wore you down. No minutes, scores or percentages anywhere: just the pattern, and the kind of mirror that makes the next choice easier. <i>Oh, Thursday evenings are always like that.</i></p>
-      </div>
-    </div>
-
-    <div class="grid-2" style="margin-top:56px">
-      <div>
-        <h3 style="margin-bottom:16px">Why a little light works better than a lock.</h3>
-        <ul class="dots" style="--c:var(--gw)">
-          <li><strong>Noticing, not nagging.</strong> The wisp does the noticing, so the choice stays yours.</li>
-          <li><strong>You're always in charge.</strong> No page is ever blocked and nothing pops up to warn you.</li>
-          <li><strong>Time away counts most.</strong> The best thing for your wisp isn't a “good” website; it's closing the laptop.</li>
-          <li><strong>Your evenings matter.</strong> After eleven, the wisp winds down with you.</li>
-        </ul>
-      </div>
-      <div>
-        <h3 style="margin-bottom:16px">Nothing leaves your computer.</h3>
-        <ul class="dots" style="--c:var(--gw)">
-          <li><strong>No accounts, telemetry, update pings or cloud.</strong> The only traffic is the pages you visit.</li>
-          <li><strong>The wisp never sees an address,</strong> only which list a place was on.</li>
-          <li><strong>History keeps a week,</strong> on your computer, then it's deleted.</li>
-          <li><strong>Trackers are blocked</strong> before they can load.</li>
-        </ul>
-      </div>
+    <div class="sub-sec">
+      <ul class="dots" style="--c:var(--gw)">
+        <li><strong>Noticing, not nagging.</strong> The wisp does the noticing, so the choice stays yours.</li>
+        <li><strong>A garden that grows on good days.</strong> Every new tab opens on a calm page made on your computer, and suggests somewhere worth going from over 300 researched corners of the web.</li>
+        <li><strong>See your days, not a scoreboard.</strong> No minutes, scores or percentages anywhere: just the pattern, and the kind of mirror that makes the next choice easier.</li>
+        <li><strong>Nothing leaves your computer.</strong> No accounts, telemetry, update pings or cloud. The only traffic is the pages you visit.</li>
+      </ul>
+      <p class="cap" style="margin-top:22px"><a href="https://github.com/peterwalker78/glimmerwood">More about Glimmerwood</a>: the garden, the wisp's days and how little leaves your computer.</p>
     </div>
 
     <div class="install">
@@ -700,42 +596,18 @@ flatpak install --user glimmerwood-x86_64.flatpak</pre><button type="button" dat
     </div>
 
     <div class="sub-sec" style="--c:var(--ws-blue)">
-      <span class="kicker">Every evening</span>
-      <h2>Four parts, then goodnight.</h2>
-      <div class="parts">
-        <div><div class="n">i</div><h3>Set it down</h3><p>Anything heavy tonight? Write it in a few words and it becomes a warm star hung low in the west. Only you will ever see it.</p></div>
-        <div><div class="n">ii</div><h3>Explore</h3><p>Tonight's list with the wisp: planets, clusters and galaxies to find, a story told a card at a time, and now and then a small question about your life.</p></div>
-        <div><div class="n">iii</div><h3>Look up</h3><p>The sky on your own. Zoom in and a real photograph from Hubble, Webb or a ground telescope takes over from the dots.</p></div>
-        <div><div class="n">iv</div><h3>Wind down</h3><p>A few slow breaths with the wisp, in for four and out for six. The screen dims, and you watch what you set down sink behind the horizon.</p></div>
-      </div>
-      <div class="grid-2" style="margin-top:44px">
-        <figure style="margin:0"><img class="shot" src="img/ws-setdown.webp" width="1280" height="800" loading="lazy" alt="The wisp beside a box asking: Is anything weighing on you tonight? Write it in a few words."><figcaption class="cap">“Is anything weighing on you tonight?” A worry written down is easier to put down.</figcaption></figure>
-        <figure style="margin:0"><img class="shot" src="img/ws-day.webp" width="1280" height="800" loading="lazy" alt="Westering by day: a dotted field under an autumn tree, a standing stone casting this minute's shadow, and the wisp."><figcaption class="cap">By day there are no stars, so it looks down: the Sun where it really is, a standing stone casting this minute's shadow, and a nudge to step outside.</figcaption></figure>
-      </div>
-    </div>
-
-    <div class="sub-sec" style="--c:var(--ws-blue)">
       <span class="kicker">Built to let you go</span>
-      <div class="feature">
-        <div>
-          <h2>It wants you to leave.</h2>
-          <p class="lead" style="margin:18px 0 22px">Most apps are built to keep you. This one is built to let you go, and says so, so there's no trick in it.</p>
-          <ul class="dots" style="--c:var(--ws)">
-            <li><strong>The sky is finite.</strong> Only so many things to find each night; then the sky is done until it has turned.</li>
-            <li><strong>It slows as you play.</strong> The twinkle, the drift and the pace ease down towards the speed of slow breathing. Nothing announces it.</li>
-            <li><strong>It offers the way out.</strong> About a quarter of an hour in, once, a line says how to wind down. It never says how long you've been here.</li>
-            <li><strong>It dims before the end,</strong> a little at a time, because bright light keeps a mind awake.</li>
-            <li><strong>Nothing to come back for.</strong> No streaks, scores, badges or notifications. Missing a night costs nothing.</li>
-            <li><strong>No network access at all.</strong> What you write stays on your computer, by construction.</li>
-          </ul>
-          <p class="lastline">“If it's clear: Saturn is up in the south-east, a steady light that doesn't twinkle. Give your eyes twenty minutes.”<span class="src" style="font-style:normal">The last line. Then the window closes itself.</span></p>
-        </div>
-        <div class="stack">
-          <img class="shot" src="img/logbook.webp" width="1060" height="730" loading="lazy" alt="A night's page in the logbook: a round chart of that evening's sky with the finds numbered, and the worries set down.">
-          <p><strong>A logbook of plain files.</strong> A page for each night with a small chart of that evening's sky. Any worry can have a plan charted for it, only if you ask: a wish, the best of it, what gets in the way, and an if-then plan.</p>
-          <img class="shot" src="img/moon.webp" width="1280" height="800" loading="lazy" alt="The Moon close up in dots, with a card: first quarter, 403,000 km away tonight.">
-        </div>
-      </div>
+      <h2>It wants you to leave.</h2>
+      <p class="lead" style="margin:18px 0 22px">Most apps are built to keep you. This one is built to let you go, and says so, so there's no trick in it.</p>
+      <ul class="dots" style="--c:var(--ws)">
+        <li><strong>The sky is finite.</strong> Only so many things to find each night; then the sky is done until it has turned.</li>
+        <li><strong>It offers the way out.</strong> About a quarter of an hour in, once, a line says how to wind down. It never says how long you've been here.</li>
+        <li><strong>Nothing to come back for.</strong> No streaks, scores, badges or notifications. Missing a night costs nothing.</li>
+        <li><strong>No network access at all.</strong> What you write stays on your computer, by construction.</li>
+      </ul>
+      <p class="lastline">“If it's clear: Saturn is up in the south-east, a steady light that doesn't twinkle. Give your eyes twenty minutes.”<span class="src" style="font-style:normal">The last line. Then the window closes itself.</span></p>
+      <p class="cap" style="margin-top:22px"><a href="https://github.com/peterwalker78/westering">More about Westering</a>: the four parts of an evening, the logbook and the real-photo sky.</p>
+
       <div class="install">
         <h3>Get Westering</h3>
         <p>Open it at the end of the day. The first night, the wisp shows you around.</p>
@@ -778,11 +650,6 @@ flatpak install --user westering-x86_64.flatpak</pre><button type="button" data-
       </section>
     </div>
     <p class="method">Counted from the AI's own session transcripts for all three apps and the agent-notify plugin, 14 September to 23 October 2026. These are minimums: the transcripts miss the first week of building, and planning done in chat. Between them, the three repositories hold 790 commits on their main branches.</p>
-    <div class="grid-3 moments-ai">
-      <article><h3>The close effect</h3><p>He picked a design from the AI's mockups; the first build looked like the window being chopped into strips. About eight rounds of his direction later (close downwards, more transparency, eat the window while pushing it), it was right.</p></article>
-      <article><h3>The idea for Westering</h3><p>The AI's first two answers to “what about down-time?” missed what he meant. He steered it to a separate app that quietly helps you switch off, then set what was in it: reflective questions, people and plans, no AI.</p></article>
-      <article><h3>The agent monitor</h3><p>Over one evening the AI said a feature worked again and again. Each time he watched a real run, it didn't. It took a redesign he pushed for, not another patch.</p></article>
-    </div>
   </div>
 </section>
 
@@ -821,38 +688,6 @@ flatpak install --user westering-x86_64.flatpak</pre><button type="button" data-
     <div class="grid-2" style="align-items:end">
       <div><span class="kicker">For the technically curious</span><h2 id="tech-h">Under the hood.</h2></div>
       <p>Three native Linux apps written in Rust, each its own open-source project, each standing on its own. They share an aim and a look, and no code dependencies in either direction. Every change is built and tested in CI.</p>
-    </div>
-    <div class="grid-3 cards">
-      <div class="card" style="--c:var(--ss)">
-        <h3>Slipstream</h3>
-        <div class="stackline">Rust · Smithay · Wayland · GTK 4</div>
-        <dl>
-          <dt>What it is</dt><dd>A whole desktop: its own Wayland compositor, bar, notifications, lock screen, app explorer and Settings. X11 apps run through XWayland; Flatpaks and games work.</dd>
-          <dt>Install</dt><dd>One portable download, checked against its published checksum and signature. It says what it will do before writing anything, and <code>--uninstall</code> removes exactly what it wrote.</dd>
-          <dt>Tested on</dt><dd>Every release is installed and started on Debian, Ubuntu, Fedora, Arch and openSUSE.</dd>
-          <dt>Extending</dt><dd>Plugins are any program that prints a line of JSON, each in a sandbox that reaches only what it lists. Settings are plain text.</dd>
-        </dl>
-      </div>
-      <div class="card" style="--c:var(--gw)">
-        <h3>Glimmerwood</h3>
-        <div class="stackline">Rust · GTK 4 · WebKitGTK 6 · Flatpak</div>
-        <dl>
-          <dt>Engine</dt><dd>WebKitGTK, from the same engine family as Safari, in a lean shell with a single toolbar.</dd>
-          <dt>Privacy</dt><dd>Trackers blocked before they load; every site asked for a secure connection first. The wisp's records hold a list name, never an address, title or anything typed.</dd>
-          <dt>A test for kindness</dt><dd>A test fails the build if the browser's own interface ever grows a pop-up dialog or anything red.</dd>
-          <dt>Lists you can read</dt><dd>What counts as restoring or wearing is plain text you can edit, and anyone can propose a change.</dd>
-        </dl>
-      </div>
-      <div class="card" style="--c:var(--ws-blue)">
-        <h3>Westering</h3>
-        <div class="stackline">Rust · GTK 4 · Flatpak with no network permission</div>
-        <dl>
-          <dt>The sky</dt><dd>Every star to magnitude 6.5 from the Yale Bright Star Catalogue. Tests check the planets against NASA JPL's Horizons to within 0.2°, and the Moon to within 0.1°.</dd>
-          <dt>No location service</dt><dd>Where you are comes from your time zone; Settings takes a latitude and longitude if you want it closer.</dd>
-          <dt>A test for calm</dt><dd>A test checks that the pace only ever eases down and the light never jumps.</dd>
-          <dt>Sources</dt><dd>Over 300 photographs from NASA, ESA/Hubble, ESA/Webb and others, each credited on screen; every music track is CC0.</dd>
-        </dl>
-      </div>
     </div>
     <div class="edges grid-2">
       <p><strong>Not yet:</strong> ARM machines, Ubuntu 24.04 and the distributions built on it, and Slipstream with NVIDIA's driver, which hasn't been tried. Glimmerwood is Linux only.</p>
@@ -898,10 +733,7 @@ flatpak install --user westering-x86_64.flatpak</pre><button type="button" data-
     <span class="kicker">Questions</span>
     <h2 id="faq-h">Plain answers.</h2>
     <dl class="faq">
-      <div><dt>What is Human Again?</dt><dd>The shared aim of three free Linux apps: Slipstream, a keyboard-first desktop; Glimmerwood, a quiet web browser; and Westering, a night-sky game for winding down. Each is built to give people their attention back rather than to hold on to it.</dd></div>
       <div><dt>Are they free?</dt><dd>Yes. All three are free and open source under the GNU GPL, version 3 or later, with no accounts, adverts or paid tiers.</dd></div>
-      <div><dt>Was the code written by AI?</dt><dd>Yes, all of it, by Claude. The vision, the design decisions and the testing come from Peter Walker, who uses all three apps every day. None of the apps has AI features, and none ever will.</dd></div>
-      <div><dt>Do they collect any data?</dt><dd>No. There is no telemetry and no account. Glimmerwood's only network traffic is the pages you visit, and Westering has no network permission at all.</dd></div>
       <div><dt>Which computers do they run on?</dt><dd>x86_64 Linux. Slipstream needs Debian 13's libraries or newer and is tested on Debian, Ubuntu, Fedora, Arch and openSUSE. Glimmerwood and Westering are Flatpaks for any Linux desktop. There are no Windows or macOS versions.</dd></div>
       <div><dt>Can I use one without the others?</dt><dd>Yes. Each is its own project. Slipstream's installer offers the other two, but Glimmerwood and Westering run on any Linux desktop.</dd></div>
       <div><dt>Can other apps join?</dt><dd>Most useful apps can, if they're at least as plain-dealing as ours: running on the user's own computer, without a server behind them, with fixed words and pictures that can be opened and checked, and no AI making things on the fly. They keep the same four promises, checked in the open. If a promise breaks, the app comes off the list until it is fixed. Read the <a href="allies.html">code for allies</a>.</dd></div>
