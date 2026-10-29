@@ -251,11 +251,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .belief blockquote { margin: 0 auto; max-width: 22ch; text-align: center; font-family: var(--display); font-style: italic; font-weight: 300; font-size: clamp(34px, 5.4vw, 60px); line-height: 1.1; letter-spacing: -.015em; text-wrap: balance; }
 .belief blockquote em { font-style: normal; font-weight: 400; color: var(--ws); }
 .belief .after { text-align: center; max-width: 58ch; margin: 28px auto 0; }
-.apps { margin-top: clamp(48px, 7vw, 80px); }
-.app { border-top: 1px solid var(--rule); padding-top: 22px; display: grid; grid-template-columns: 56px minmax(0, 1fr); gap: 16px; align-items: start; }
-.app img { width: 56px; height: 56px; border-radius: 12px; object-fit: contain; }
 .when { display: block; font-family: var(--mono); font-size: 11.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--c); margin-bottom: 4px; }
-.app p { font-size: 15.5px; line-height: 1.5; margin-top: 6px; }
 
 /* day */
 .day { padding-top: 0; }
@@ -470,12 +466,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
   <div class="wrap">
     <span class="kicker" style="text-align:center" id="belief-h">What we believe</span>
     <blockquote>Software should be judged by how well you live when you're <em>not</em> using it.</blockquote>
-    <p class="after">Here are three free apps that try to pass that test.</p>
-    <div class="grid-3 apps">
-      <div class="app" style="--c:var(--ss)"><img src="img/ss-ring.webp" width="192" height="192" alt="Slipstream's logo"><div><span class="when">When you work</span><h3>Slipstream</h3><p>A whole Linux desktop, keyboard-first, where nothing interrupts you while you're typing.</p></div></div>
-      <div class="app" style="--c:var(--gw)"><img src="img/gw-icon.svg" width="56" height="56" alt="Glimmerwood's icon: the wisp on moss"><div><span class="when">When you're online</span><h3>Glimmerwood</h3><p>A quiet browser whose small companion brightens when you learn or make something, and grows sleepy in an endless feed.</p></div></div>
-      <div class="app" style="--c:var(--ws-blue)"><img src="img/ws-icon.svg" width="56" height="56" alt="Westering's icon: a warm star low over a mossy horizon"><div><span class="when">When the day is done</span><h3>Westering</h3><p>A few quiet minutes under tonight's real sky, and then it suggests you go and look at the real stars, or go to bed.</p></div></div>
-    </div>
+    <p class="after">Slipstream, Glimmerwood and Westering are three free apps that try to pass that test.</p>
   </div>
 </section>
 
@@ -596,8 +587,6 @@ flatpak install --user glimmerwood-x86_64.flatpak</pre><button type="button" dat
       <ul class="dots" style="--c:var(--ws)">
         <li><strong>The sky is finite.</strong> Only so many things to find each night; then the sky is done until it has turned.</li>
         <li><strong>It offers the way out.</strong> About a quarter of an hour in, once, a line says how to wind down. It never says how long you've been here.</li>
-        <li><strong>Nothing to come back for.</strong> No streaks, scores, badges or notifications. Missing a night costs nothing.</li>
-        <li><strong>No network access at all.</strong> What you write stays on your computer, by construction.</li>
       </ul>
       <p class="lastline">“If it's clear: Saturn is up in the south-east, a steady light that doesn't twinkle. Give your eyes twenty minutes.”<span class="src" style="font-style:normal">The last line. Then the window closes itself.</span></p>
       <p class="cap" style="margin-top:22px"><a href="https://github.com/peterwalker78/westering">More about Westering</a>: the four parts of an evening, the logbook and the real-photo sky.</p>
@@ -643,7 +632,7 @@ flatpak install --user westering-x86_64.flatpak</pre><button type="button" data-
     </div>
     <div style="overflow-x:auto;min-width:0">
       <table class="sci-table">
-        <thead><tr><th scope="col">What research found</th><th scope="col">What we built</th><th scope="col">Where</th></tr></thead>
+        <thead><tr><th scope="col">What research found</th><th scope="col">What it inspired</th><th scope="col">Where</th></tr></thead>
         <tbody>
           <tr><td><strong>Interruptions cost more than time.</strong> People make up for them by rushing, at the price of stress and frustration.<span class="src"><a href="https://doi.org/10.1145/1357054.1357072">Mark, Gudith &amp; Klocke, 2008</a></span></td><td>Notifications wait for a pause in your typing, then arrive as one card.</td><td class="app-name" style="color:var(--ss-deep)">Slipstream</td></tr>
           <tr><td><strong>Calm technology</strong> informs at the edge of attention instead of demanding the centre of it.<span class="src">Weiser &amp; Brown, 1995</span></td><td>Streams show what an app is doing from the corner of your eye; the wisp sits quietly in a corner.</td><td class="app-name" style="color:var(--ss-deep);white-space:normal">Slipstream and Glimmerwood</td></tr>
@@ -686,7 +675,7 @@ flatpak install --user westering-x86_64.flatpak</pre><button type="button" data-
         <div><b>Honest and open.</b><p>Free, open source, and plain about how they're made, AI included. Read every line, build it yourself, keep it for ever.</p></div>
         <div><b>It stays on your computer.</b><p>No telemetry, accounts or cloud. Westering can't even reach the network.</p></div>
         <div><b>Made to be put down.</b><p>No streaks, scores, badges or nagging, and nothing is blocked. A day away costs you nothing.</p></div>
-        <div><b>No AI features, ever.</b><p>AI wrote the code, but the apps never make anything up as you go. Everything they show you is fixed, and was checked by a person.</p></div>
+        <div><b>No AI features, ever.</b><p>AI wrote the code, but none runs inside the apps. So they behave the same way every time, nothing you type goes to a model, and everything they show you was checked by a person.</p></div>
       </div>
       <p style="margin-top:22px">Made something in the same spirit? Read the <a href="allies.html">code for allies</a>.</p>
     </div>

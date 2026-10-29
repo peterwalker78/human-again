@@ -17,7 +17,7 @@ The belief behind them: software should be judged by how well you live when you'
 
 ## The four promises
 
-Honest and open (free, open source, plain about how they are made, AI included); it stays on your computer (no telemetry, accounts or cloud); made to be put down (no streaks, scores, badges or nagging, nothing blocked, a day away costs nothing); no AI features, ever (the apps never generate anything as you use them; everything they show is fixed and checked by a person).
+Honest and open (free, open source, plain about how they are made, AI included); it stays on your computer (no telemetry, accounts or cloud); made to be put down (no streaks, scores, badges or nagging, nothing blocked, a day away costs nothing); no AI features, ever (no AI runs inside the apps, so they behave the same way every time, nothing typed goes to a model, and everything they show was checked by a person).
 
 ## Research the design draws on
 
